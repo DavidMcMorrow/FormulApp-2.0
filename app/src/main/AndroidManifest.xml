@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Getting_Area_Volume"></activity>
+        <activity android:name=".uvast_calc"/>
         <activity android:name=".light_page" />
         <activity android:name=".mechanics_page" />
         <activity android:name=".elec_page" />
