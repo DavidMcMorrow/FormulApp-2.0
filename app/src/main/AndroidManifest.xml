@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Getting_Area_Volume"></activity>
+        <activity android:name=".Maths_Function" android:exported="true"/>
+        <activity
+            android:name=".Maths_Graph"
+            android:exported="true" />
+        <activity android:name=".Getting_Area_Volume" />
         <activity android:name=".light_page" />
         <activity android:name=".mechanics_page" />
         <activity android:name=".elec_page" />
