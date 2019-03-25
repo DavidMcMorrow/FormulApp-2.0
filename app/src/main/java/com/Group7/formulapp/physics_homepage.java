@@ -24,10 +24,7 @@ public class physics_homepage extends AppCompatActivity {
         Physics_btn2 = (Button) findViewById(R.id.Physics_btn2);
         Physics_btn3 = (Button) findViewById(R.id.Physics_btn3);
         Physics_btn4 = (Button) findViewById(R.id.Physics_btn4);
-<<<<<<< HEAD
-=======
 
->>>>>>> c02884f32a9e3fc10249a32158c382ea1d5cf0b0
 
         Physics_btn1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,10 +47,9 @@ public class physics_homepage extends AppCompatActivity {
                 openPhysicsPage3(); // function for opening page
             }
         });
-<<<<<<< HEAD
-=======
 
->>>>>>> c02884f32a9e3fc10249a32158c382ea1d5cf0b0
+
+
         Physics_btn4.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
@@ -73,17 +69,11 @@ public class physics_homepage extends AppCompatActivity {
         Intent intent = new Intent(this,light_page.class);
         startActivity(intent);
     }
-    public void openPhysicsPage4(){
-<<<<<<< HEAD
-        Intent intent = new Intent(this,uvast_calc.class);
-        startActivity(intent);
-    }
-=======
-        Intent intent = new Intent(this,physics_experiments_homepage.class);
-        startActivity(intent);
-    }
+    public void openPhysicsPage4() {
 
->>>>>>> c02884f32a9e3fc10249a32158c382ea1d5cf0b0
+        Intent intent = new Intent(this, uvast_calc.class);
+        startActivity(intent);
+    }
 
 }
 
