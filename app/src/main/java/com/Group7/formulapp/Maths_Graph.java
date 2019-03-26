@@ -18,7 +18,7 @@ public class Maths_Graph extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_graph);
         Intent intent = getIntent();
-         String fct = intent.getStringExtra("fct");
+        String fct = intent.getStringExtra("fct");
 
         JEP myParser = new JEP();
         myParser.addStandardFunctions();
