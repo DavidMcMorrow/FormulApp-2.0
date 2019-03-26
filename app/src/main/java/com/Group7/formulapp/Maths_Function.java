@@ -37,11 +37,10 @@ public class Maths_Function extends AppCompatActivity {
 
                 @Override
                 public void onClick(View v) {
-                    // TODO Auto-generated method stub
                     formula_two = (MathView) findViewById(R.id.formula_two);
                     EditText tex = (EditText) findViewById(R.id.equation);
                     formula_two.setText("$$"+tex.getText().toString()+"$$");
-                     fct = tex.getText().toString();
+                    fct = tex.getText().toString();
 
 
                 }
