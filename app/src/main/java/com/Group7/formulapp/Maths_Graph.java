@@ -11,6 +11,7 @@ import com.jjoe64.graphview.LegendRenderer;
 import org.nfunk.jep.JEP;
 import java.util.Random;
 
+
 public class Maths_Graph extends AppCompatActivity {
 
     private LineGraphSeries<DataPoint> series;
