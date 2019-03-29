@@ -14,6 +14,7 @@
         <activity android:name=".light_page" />
         <activity android:name=".mechanics_page" />
         <activity android:name=".elec_page" />
+        <activity android:name=".lens_calc" />
         <activity android:name=".physics_homepage" />
         <activity android:name=".physics_experiments_homepage" />
         <activity android:name=".Maths_Homepage" />
