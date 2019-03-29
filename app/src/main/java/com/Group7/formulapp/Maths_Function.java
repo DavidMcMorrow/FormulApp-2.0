@@ -22,7 +22,7 @@ public class Maths_Function extends AppCompatActivity {
     private Button newFctButton;
     private EditText currentEdit;
     private EditText parentEdit;
-    private int nbFct;
+    private int nbNewFct;
 
    /* String tex = "This come from string. You can insert inline formula:" +
             " $$cos^2$$ " + "test" +
@@ -40,7 +40,7 @@ public class Maths_Function extends AppCompatActivity {
         mLayout = (RelativeLayout) findViewById(R.id.relative);
         currentEdit = (EditText) findViewById(R.id.init_fct);
         formula = (MathView) findViewById(R.id.formula);
-        nbFct = 0;
+        nbNewFct = 0;
         fctList=new String[100];
 
         //Action when we click on the submit button : display the Math View of the fct
@@ -61,9 +61,9 @@ public class Maths_Function extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                nbFct++;
-                mLayout.addView(createNewEditText(nbFct));
-                String nameCurrent = "" + nbFct;
+                nbNewFct++;
+                mLayout.addView(createNewEditText(nbNewFct));
+                String nameCurrent = "" + nbNewFct;
                 //We change the current EditText
                 currentEdit = (EditText)findViewById(getResources().getIdentifier(nameCurrent, "id", getPackageName()));
 
