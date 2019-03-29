@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".differentiation" />
+        <activity android:name=".Maths_Setting_Graph"
+            android:exported="true"></activity>
         <activity
             android:name=".Maths_Function"
             android:exported="true" />
