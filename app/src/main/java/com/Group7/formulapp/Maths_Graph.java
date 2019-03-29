@@ -18,30 +18,38 @@ public class Maths_Graph extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_graph);
         Intent intent = getIntent();
-        String fct = intent.getStringExtra("fct");
+        String[] fctList = intent.getStringArrayExtra("fct");
 
+        //We create the parser with a call to the library JEP
         JEP myParser = new JEP();
         myParser.addStandardFunctions();
         myParser.addStandardConstants();
 
+        double x, y;
 
-
-        double x,y;
-        x =0;
         GraphView graph = (GraphView) findViewById(R.id.graph);
-        series= new LineGraphSeries<>();
+        series = new LineGraphSeries<>();
 
         //Define the number of data point we use to build the graph
         int numPoints = 500;
-        for(int i = 0; i <numPoints; i++){
-            x = x+0.1; //We increase the value of x of 0.1, to have a continue graph
-            myParser.addVariable("x", x);
-            myParser.parseExpression(fct);
-            y = myParser.getValue();
+        for (int j = 0; j < fctList.length -1; j++) {
+            if (fctList[j] != null) {
+                x = 0;
+                series = new LineGraphSeries<>();
+                for (int i = 0; i < numPoints; i++) {
 
-            series.appendData(new DataPoint(x,y),true,100); // We add the point to the series
+
+                    x = x + 0.1; //We increase the value of x of 0.1, to have a continue graph
+                    myParser.addVariable("x", x);
+                    myParser.parseExpression(fctList[j]);
+                    y = myParser.getValue();
+
+                    series.appendData(new DataPoint(x, y), true, 100); // We add the point to the series
+                }
+                //Now we add the serie to the graph
+                graph.addSeries(series);
+            }
         }
-
         // set manual X bounds
         /*graph.getViewport().setYAxisBoundsManual(true);
         graph.getViewport().setMinY(-100);
@@ -55,8 +63,7 @@ public class Maths_Graph extends AppCompatActivity {
         graph.getViewport().setScalable(true);
         graph.getViewport().setScalableY(true);
 
-        //Now we add the serie to the graph
-        graph.addSeries(series);
+
 
     }
 }

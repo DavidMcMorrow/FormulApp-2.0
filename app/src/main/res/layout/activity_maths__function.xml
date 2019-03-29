@@ -2,6 +2,7 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Maths_Function">
@@ -23,57 +24,71 @@
         app:layout_constraintVertical_bias="0.458">
 
 
-
-        <LinearLayout
+        <RelativeLayout
+            android:id="@+id/relative"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <EditText
-                android:id="@+id/equation"
+                android:id="@+id/init_fct"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:ems="10"
                 android:hint="Enter your function"
 
-               />
+                />
+
 
 
             <Button
                 android:id="@+id/submit_fct"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/init_fct"
                 android:layout_marginTop="20dp"
                 android:text="Submit"
 
-                app:layout_constraintTop_toBottomOf="@+id/equation"/>
+                />
 
 
             <io.github.kexanie.library.MathView
-                android:id="@+id/formula_two"
+                android:id="@+id/formula"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
+                android:layout_below="@+id/submit_fct"
                 android:text=""
 
                 ></io.github.kexanie.library.MathView>
+
+
+            <Button
+                android:id="@+id/new_fct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/formula"
+                android:layout_marginTop="20dp"
+                android:text="New function"
+
+
+                />
+
 
             <Button
                 android:id="@+id/graph_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/new_fct"
                 android:layout_marginTop="20dp"
-                android:text="See Graph"
                 android:onClick="goToGraph"
+                android:text="See Graph"
 
                 />
 
 
-
-
-
-        </LinearLayout>
+        </RelativeLayout>
     </ScrollView>
 
-    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>
