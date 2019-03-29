@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
+    <!-- TODO add Mathview for result instead of TextView -->
     <EditText
         android:id="@+id/ni_f"
         android:layout_width="333dp"
@@ -37,6 +37,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/ni_f" />
+    <!-- TODO add edittext for variable name -->
 
     <EditText
         android:id="@+id/ni_lower"

@@ -33,6 +33,7 @@ public class MathsNumericIntegration extends AppCompatActivity {
         EditText ni_f = findViewById(R.id.ni_f);
         final String fct = ni_f.getText().toString();
         //parse function for fast evaluation
+        //TODO get variable name from edit text and not a dummy
         myParser.addVariable("x", 0);
         myParser.parseExpression(fct);
         //Initialize Univariate function to pass to the integrator
@@ -63,6 +64,7 @@ public class MathsNumericIntegration extends AppCompatActivity {
                 //System.out.println("ESTIMATE: " + eval);
                 TextView result = findViewById(R.id.ni_result);
                 String resultString = "The result is : " + eval;
+                //TODO make MathView
                 result.setText(resultString);
                 converged = true;
             } catch (TooManyEvaluationsException e) {
