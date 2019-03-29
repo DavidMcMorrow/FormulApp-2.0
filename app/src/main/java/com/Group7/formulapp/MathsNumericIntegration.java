@@ -1,11 +1,16 @@
 package com.Group7.formulapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import org.apache.commons.math3.analysis.UnivariateFunction;
 import org.apache.commons.math3.analysis.integration.RombergIntegrator;
+import org.apache.commons.math3.exception.MathIllegalArgumentException;
 import org.apache.commons.math3.exception.TooManyEvaluationsException;
 import org.nfunk.jep.JEP;
 
@@ -15,19 +20,20 @@ public class MathsNumericIntegration extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //TODO make lay out and integrate it with onIntegrate
+        setContentView(R.layout.activity_numerical_integration);
 
     }
 
-    protected void onIntegrate(){
+
+    protected void onIntegrate(View v) {
         //initialize jep parser
         final JEP myParser = new JEP();
         myParser.addStandardFunctions();
         myParser.addStandardConstants();
-        //TODO get the string from user input, atm it's a dummy
-        final String fct = "x^3 + 4*x^2+3*x";
+        EditText ni_f = findViewById(R.id.ni_f);
+        final String fct = ni_f.getText().toString();
         //parse function for fast evaluation
-        myParser.addVariable("x",0);
+        myParser.addVariable("x", 0);
         myParser.parseExpression(fct);
         //Initialize Univariate function to pass to the integrator
         UnivariateFunction f = new UnivariateFunction() {
@@ -47,28 +53,44 @@ public class MathsNumericIntegration extends AppCompatActivity {
         int attempts = 0;
         // tag
         boolean converged = false;
+        EditText lowerV = findViewById(R.id.ni_lower);
+        EditText upperV = findViewById(R.id.ni_upper);
+        double upper = Double.valueOf(upperV.getText().toString());
+        double lower = Double.valueOf(lowerV.getText().toString());
         while (!converged) {
             try {
-                //TODO get bounds from user input
-                double eval = solver.integrate(iterations, f, 0, 3);
-                //TODO put answer in appropriate text box
-                System.out.println("ESTIMATE: " + eval);
+                double eval = solver.integrate(iterations, f, lower, upper);
+                //System.out.println("ESTIMATE: " + eval);
+                TextView result = findViewById(R.id.ni_result);
+                String resultString = "The result is : " + eval;
+                result.setText(resultString);
                 converged = true;
-            } catch (TooManyEvaluationsException e){
+            } catch (TooManyEvaluationsException e) {
                 //Error handling for when the function passed doesn't converge
                 if (attempts > 3) {
-                    //TODO pass on the resulting ERROR in an appropriate way to the user
-                    System.out.println("The integration didn't converge, make sure that the function is univariate and real");
-                    System.out.println("ITERATIONS USED: " + iterations);
-                    System.err.println(e);
-                    System.exit(-1);
+                    String error = "The algorithm wasn't able to converge. Make sure the function is univariate and real (no asymptotes)";
+                    TextView result = findViewById(R.id.ni_result);
+                    result.setText(error);
+                    break;
+
                 }
                 // If the number of attempts doesn't exceed max, multiply iterations by 10 and try again
-                attempts +=1;
+                attempts += 1;
                 //System.out.println(iterations + " iterations wasn't enough to find converging point");
                 iterations *= 10;
                 //System.out.println("Trying to find converging point with " + iterations + " of iterations");
+            } catch (MathIllegalArgumentException e) {
+                String error = "The bounds were inappropriate for the function given";
+                TextView result = findViewById(R.id.ni_result);
+                result.setText(error);
+                break;
             }
         }
+    }
+
+
+    public void goToHome(View v) {
+        Intent intent = new Intent(this, Maths_Homepage.class);
+        startActivity(intent);
     }
 }

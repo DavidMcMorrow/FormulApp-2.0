@@ -82,4 +82,9 @@ public class Maths_Homepage extends AppCompatActivity {
         Intent intent = new Intent(this,Getting_Area_Volume.class);
         startActivity(intent);
     }
+
+    protected void goToNumericalIntegration(View v){
+        Intent intent = new Intent(this, MathsNumericIntegration.class);
+        startActivity(intent);
+    }
 }

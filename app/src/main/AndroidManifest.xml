@@ -13,6 +13,7 @@
         <activity
             android:name=".Maths_Graph"
             android:exported="true" />
+        <activity android:name=".MathsNumericIntegration"/>
         <activity android:name=".Getting_Area_Volume" />
         <activity android:name=".light_page" />
         <activity android:name=".mechanics_page" />
