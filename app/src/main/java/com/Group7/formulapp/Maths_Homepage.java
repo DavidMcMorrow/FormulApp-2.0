@@ -31,79 +31,44 @@ public class Maths_Homepage extends AppCompatActivity {
         graph_btn = (Button) findViewById(R.id.graph_btn);
         differentiate_btn = (Button) findViewById(R.id.differentiate_btn);
 
-        Trig_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v){
-                openTrigPage();         //function for opening page
-            }
-        });
-
-        Physics_btn.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                openPhysicsPage();   //function for opening page
-            }
-
-        });
-
-        LandA_btn.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                openLengthandAreaPage(); // function for opening page
-            }
-        });
-
-        quadrix_btn.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                openQuadrixPage(); // function for opening page
-            }
-        });
-        VandA_btn.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                openVandAPage(); // function for opening page
-            }
-        });
-        graph_btn.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                openGraphPage(); // function for opening page
-            }
-        });
-        differentiate_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                opendifferentiatepage();
-            }
-        });
     }
 
-    public void openTrigPage(){         //Not really sure how this work will have to look into it
+    //Function to open Trig Page
+
+    public void openTrigPage(View v){         //Not really sure how this work will have to look into it
         Intent intent = new Intent(this,Trig_page.class);
         startActivity(intent);
     }
-    public void openPhysicsPage(){
+
+    //Function to open Physics Page
+    public void openPhysicsPage(View v){
         Intent intent = new Intent(this,Physics_page.class);
         startActivity(intent);
     }
-    public void openLengthandAreaPage(){
+
+    //Function to open Length and Area Page
+    public void openLengthandAreaPage(View v){
         Intent intent = new Intent(this,Length_Area_page.class);
         startActivity(intent);
     }
-    public void openQuadrixPage(){
+    //Function to open Quadrix Page
+    public void openQuadrixPage(View v){
         Intent intent = new Intent(this,quadrix.class);
         startActivity(intent);
     }
-    public void openVandAPage(){
+    //Function to open Volume and Area Page
+    public void openVandAPage(View v){
         Intent intent = new Intent(this,Getting_Area_Volume.class);
         startActivity(intent);
     }
-    public void openGraphPage(){
+    //Function to open Graph Page
+    public void openGraphPage(View v){
         Intent intent = new Intent(this,Maths_Function.class);
         startActivity(intent);
     }
-    public void opendifferentiatepage(){
+
+    //Function to open Differentiate Page
+    public void openDifferentiatePage(View v){
         Intent intent = new Intent(this,differentiation.class);
         startActivity(intent);
     }
