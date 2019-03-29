@@ -7,6 +7,29 @@ android:layout_height="match_parent"
 android:background="@drawable/page"
 tools:context=".Maths_Homepage">
 
+    <ScrollView
+        android:layout_width="405dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:scrollbarStyle="outsideInset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.458">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
 <TextView
     android:id="@+id/Header"
     android:layout_width="296dp"
@@ -16,7 +39,7 @@ tools:context=".Maths_Homepage">
     android:layout_marginTop="28dp"
     android:layout_marginEnd="32dp"
     android:layout_marginRight="32dp"
-    android:text="Maths"
+    android:text="@string/maths"
     android:textColor="@color/colorPrimaryDark"
     android:textSize="30sp"
     android:textStyle="bold"
@@ -35,7 +58,7 @@ tools:context=".Maths_Homepage">
     android:layout_marginLeft="67dp"
     android:layout_marginTop="64dp"
     android:background="@null"
-    android:text="Trigonmetry"
+    android:text="@string/trigonmetry"
     android:textSize="18sp"
     android:typeface="serif"
     app:layout_constraintEnd_toEndOf="parent"
@@ -51,7 +74,7 @@ tools:context=".Maths_Homepage">
     android:layout_marginLeft="67dp"
     android:layout_marginTop="20dp"
     android:background="@null"
-    android:text="Fundamental Physical Constraints"
+    android:text="@string/fundamental_physical_constraints"
     android:textSize="18sp"
     android:typeface="serif"
     app:layout_constraintEnd_toEndOf="parent"
@@ -102,7 +125,7 @@ tools:context=".Maths_Homepage">
         android:layout_marginEnd="48dp"
         android:layout_marginRight="48dp"
         android:background="@null"
-        android:text="Get Area and Volume"
+        android:text="@string/get_area_and_volume"
         android:textSize="18sp"
         android:typeface="serif"
         app:layout_constraintEnd_toEndOf="parent"
@@ -126,5 +149,42 @@ tools:context=".Maths_Homepage">
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/VandA_btn"  />
+
+    <Button
+        android:id="@+id/graph_btn"
+        android:layout_width="296dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="67dp"
+        android:layout_marginLeft="67dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginRight="48dp"
+        android:background="@null"
+        android:text="@string/graphing"
+        android:textSize="18sp"
+        android:typeface="serif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/VandA_btn" />
+
+    <Button
+        android:id="@+id/differentiate_btn"
+        android:layout_width="296dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="67dp"
+        android:layout_marginLeft="67dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginRight="48dp"
+        android:background="@null"
+        android:text="Differentiate"
+        android:textSize="18sp"
+        android:typeface="serif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/graph_btn" />
+
+    </LinearLayout>
+    </ScrollView>
 
 </android.support.constraint.ConstraintLayout>
