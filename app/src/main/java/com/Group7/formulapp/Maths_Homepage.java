@@ -13,6 +13,8 @@ public class Maths_Homepage extends AppCompatActivity {
     private Button quadrix_btn;
     private Button LandA_btn;
     private Button VandA_btn;
+    private Button graph_btn;
+    private Button differentiate_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +28,8 @@ public class Maths_Homepage extends AppCompatActivity {
         LandA_btn = (Button) findViewById(R.id.LandA_btn);
         quadrix_btn = (Button) findViewById(R.id.quadrix_btn);
         VandA_btn = (Button) findViewById(R.id.VandA_btn);
+        graph_btn = (Button) findViewById(R.id.graph_btn);
+        differentiate_btn = (Button) findViewById(R.id.differentiate_btn);
 
         Trig_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,7 +65,20 @@ public class Maths_Homepage extends AppCompatActivity {
                 openVandAPage(); // function for opening page
             }
         });
+        graph_btn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                openGraphPage(); // function for opening page
+            }
+        });
+        differentiate_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                opendifferentiatepage();
+            }
+        });
     }
+
     public void openTrigPage(){         //Not really sure how this work will have to look into it
         Intent intent = new Intent(this,Trig_page.class);
         startActivity(intent);
@@ -80,6 +97,14 @@ public class Maths_Homepage extends AppCompatActivity {
     }
     public void openVandAPage(){
         Intent intent = new Intent(this,Getting_Area_Volume.class);
+        startActivity(intent);
+    }
+    public void openGraphPage(){
+        Intent intent = new Intent(this,Maths_Function.class);
+        startActivity(intent);
+    }
+    public void opendifferentiatepage(){
+        Intent intent = new Intent(this,differentiation.class);
         startActivity(intent);
     }
 }
