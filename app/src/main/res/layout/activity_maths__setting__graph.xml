@@ -31,35 +31,64 @@
             android:orientation="vertical">
 
 
-            <EditText
-                android:id="@+id/limit_fct_min"
+            <TextView
+                android:id="@+id/txt_lower_bound"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:layout_alignParentRight="@+id/limit_fct_max"
-                android:ems="10"
-                android:hint="Enter the min of x"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentRight="@+id/txt_upper_bound"
+                android:ems="20"
+                android:text="Lower bound"
+
+                />
+
+            <TextView
+                android:id="@+id/txt_upper_bound"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/txt_lower_bound"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="188dp"
+                android:layout_marginTop="20dp"
+                android:ems="20"
+                android:text="Upper bound " />
+
+
+            <EditText
+                android:id="@+id/lower_bound"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/txt_lower_bound"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentRight="@+id/upper_bound"
+                android:ems="5"
+                android:hint="Enter the lower bound"
 
                 />
 
             <EditText
-                android:id="@+id/limit_fct_max"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/limit_fct_min"
+                android:id="@+id/upper_bound"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/txt_lower_bound"
+                android:layout_alignLeft="@+id/lower_bound"
                 android:layout_marginLeft="188dp"
-                android:layout_marginTop="20dp"
-                android:ems="10"
-                android:hint="Enter the max of x" />
+                android:layout_marginTop="10dp"
+                android:ems="5"
+                android:hint="Enter the upper bound " />
+
+
 
 
             <Button
                 android:id="@+id/ok_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/limit_fct_min"
+                android:layout_below="@+id/upper_bound"
                 android:layout_marginTop="20dp"
                 android:text="Ok"
+                android:onClick="goToGraph"
 
                 />
 

@@ -20,9 +20,6 @@ public class Maths_Homepage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maths__homepage);
-
-
-
         Trig_btn = (Button) findViewById(R.id.Trig_btn);         //declaring buttons
         Physics_btn = (Button) findViewById(R.id.Physics_btn);
         LandA_btn = (Button) findViewById(R.id.LandA_btn);
@@ -35,41 +32,44 @@ public class Maths_Homepage extends AppCompatActivity {
 
     //Function to open Trig Page
 
-    public void openTrigPage(View v){         //Not really sure how this work will have to look into it
-        Intent intent = new Intent(this,Trig_page.class);
+    public void openTrigPage(View v) {         //Not really sure how this work will have to look into it
+        Intent intent = new Intent(this, Trig_page.class);
         startActivity(intent);
     }
 
     //Function to open Physics Page
-    public void openPhysicsPage(View v){
-        Intent intent = new Intent(this,Physics_page.class);
+    public void openPhysicsPage(View v) {
+        Intent intent = new Intent(this, Physics_page.class);
         startActivity(intent);
     }
 
     //Function to open Length and Area Page
-    public void openLengthandAreaPage(View v){
-        Intent intent = new Intent(this,Length_Area_page.class);
+    public void openLengthandAreaPage(View v) {
+        Intent intent = new Intent(this, Length_Area_page.class);
         startActivity(intent);
     }
+
     //Function to open Quadrix Page
-    public void openQuadrixPage(View v){
-        Intent intent = new Intent(this,quadrix.class);
+    public void openQuadrixPage(View v) {
+        Intent intent = new Intent(this, quadrix.class);
         startActivity(intent);
     }
+
     //Function to open Volume and Area Page
-    public void openVandAPage(View v){
-        Intent intent = new Intent(this,Getting_Area_Volume.class);
+    public void openVandAPage(View v) {
+        Intent intent = new Intent(this, Getting_Area_Volume.class);
         startActivity(intent);
     }
+
     //Function to open Graph Page
-    public void openGraphPage(View v){
-        Intent intent = new Intent(this,Maths_Function.class);
+    public void openGraphPage(View v) {
+        Intent intent = new Intent(this, Maths_Function.class);
         startActivity(intent);
     }
 
     //Function to open Differentiate Page
-    public void openDifferentiatePage(View v){
-        Intent intent = new Intent(this,differentiation.class);
+    public void openDifferentiatePage(View v) {
+        Intent intent = new Intent(this, differentiation.class);
         startActivity(intent);
     }
 }

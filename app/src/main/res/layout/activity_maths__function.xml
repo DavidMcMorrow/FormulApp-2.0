@@ -31,7 +31,18 @@
             android:orientation="vertical">
 
             <EditText
+                android:id="@+id/variable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="Variable you want to use (Eg:x)"
+                android:ems="10"
+                />
+
+
+            <EditText
                 android:id="@+id/init_fct"
+                android:layout_below="@+id/variable"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
@@ -81,7 +92,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/new_fct"
                 android:layout_marginTop="20dp"
-                android:onClick="goToGraph"
+                android:onClick="goToGraphSetting"
                 android:text="See Graph"
 
                 />
