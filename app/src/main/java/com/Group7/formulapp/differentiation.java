@@ -9,13 +9,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 
-import org.apache.commons.math3.analysis.UnivariateFunction;
 import org.apache.commons.math3.analysis.differentiation.DerivativeStructure;
-import org.apache.commons.math3.analysis.differentiation.FiniteDifferencesDifferentiator;
-import org.apache.commons.math3.analysis.differentiation.UnivariateDifferentiableFunction;
-import org.apache.commons.math3.util.FastMath;
 
-import java.util.Locale;
 
 import io.github.kexanie.library.MathView;
 
@@ -36,7 +31,6 @@ public class differentiation extends AppCompatActivity {
         Button clickButton = (Button) findViewById(R.id.show_function);
         diff_result = (TextView) findViewById(R.id.diff_result);
         clickButton.setOnClickListener( new View.OnClickListener() {
-
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub

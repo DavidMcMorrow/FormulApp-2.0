@@ -11,6 +11,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Button maths_homepage_btn;
     private Button Physics_homepage_btn;
+    private Button Units_btn;
 
     @Override
 
@@ -20,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
         maths_homepage_btn   =  (Button) findViewById(R.id.maths_homepage_btn);         //declaring buttons
         Physics_homepage_btn = (Button) findViewById(R.id.Physics_Homepage_btn);
-
+        Units_btn = (Button) findViewById(R.id.Units_btn);
 
         maths_homepage_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,6 +37,14 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
+        Units_btn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                openUnits_page();   //function for opening page
+            }
+
+        });
+
 
     }
     public void openMaths_Homepage(){         //Not really sure how this work will have to look into it
@@ -44,6 +53,10 @@ public class MainActivity extends AppCompatActivity {
     }
     public void openPhysics_homepage(){
         Intent intent = new Intent(this,physics_homepage.class);
+        startActivity(intent);
+    }
+    public void openUnits_page(){
+        Intent intent = new Intent(this,units_page.class);
         startActivity(intent);
     }
 }
