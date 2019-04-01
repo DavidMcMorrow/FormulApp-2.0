@@ -101,4 +101,5 @@
     <string name="sector_of_disc_radius_r_angle_2">sector of disc, radius r, angle 2θ</string>
     <string name="_2r_sin_3">2r * sinθ / 3θ</string>
     <string name="surface_area_and_volume">Surface Area and Volume</string>
+    <string name="title_activity_square">Square</string>
 </resources>

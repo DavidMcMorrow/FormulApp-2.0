@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Getting_Area_Volume"></activity>
+        <activity android:name=".Rectangle"></activity>
+        <activity
+            android:name=".Square"
+            android:label="@string/title_activity_square"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Getting_Area_Volume" />
         <activity android:name=".light_page" />
         <activity android:name=".mechanics_page" />
         <activity android:name=".elec_page" />
@@ -18,7 +23,14 @@
         <activity android:name=".Length_Area_page" />
         <activity android:name=".Physics_page" />
         <activity android:name=".Trig_page" />
-        <activity android:name=".quadrix" />
+        <activity android:name=".Two_d_page" />
+        <activity android:name=".Circle" />
+        <activity android:name=".Triangle" />
+        <activity android:name=".Trapezuim" />
+        <activity android:name=".Rhombus" />
+        <activity android:name=".Hexagon" />
+        <activity android:name=".Pentagon" />
+        <activity android:name=".Octagon" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
