@@ -44,16 +44,16 @@ public class MainActivity extends AppCompatActivity {
         });
 
         list = new ArrayList<>();
-        list.add("Apple");
-        list.add("Banana");
-        list.add("Pineapple");
-        list.add("Orange");
-        list.add("Lychee");
-        list.add("Gavava");
-        list.add("Peech");
-        list.add("Melon");
-        list.add("Watermelon");
-        list.add("Papaya");
+        list.add("Formula 1");
+        list.add("Formula 2");
+        list.add("Formula 3");
+        list.add("Formula 4");
+        list.add("Formula 5");
+        list.add("Formula 6");
+        list.add("Formula 7");
+        list.add("Formula 8");
+        list.add("Formula 9");
+        list.add("Formula 10");
 
         adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,list);
         listView.setAdapter(adapter);
