@@ -14,6 +14,7 @@ public class Maths_Homepage extends AppCompatActivity {
     private Button LandA_btn;
     private Button VandA_btn;
     private Button two_d_btn;
+    private Button three_d;
 
 
 
@@ -30,6 +31,8 @@ public class Maths_Homepage extends AppCompatActivity {
         quadrix_btn = (Button) findViewById(R.id.quadrix_btn);
         VandA_btn = (Button) findViewById(R.id.VandA_btn);
         two_d_btn = (Button) findViewById(R.id.two_d_btn);
+        two_d_btn = (Button) findViewById(R.id.three_d);
+
 
         Trig_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,6 +74,12 @@ public class Maths_Homepage extends AppCompatActivity {
                 opentwo_d_btnPage(); // function for opening page
             }
         });
+        three_d.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                openthree_d_btnPage(); // function for opening page
+            }
+        });
     }
     public void openTrigPage(){         //Not really sure how this work will have to look into it
         Intent intent = new Intent(this,Trig_page.class);
@@ -94,6 +103,10 @@ public class Maths_Homepage extends AppCompatActivity {
     }
     public void opentwo_d_btnPage(){
         Intent intent = new Intent(this,Two_d_page.class);
+        startActivity(intent);
+    }
+    public void openthree_d_btnPage(){
+        Intent intent = new Intent(this,Three_d_page.class);
         startActivity(intent);
     }
 }

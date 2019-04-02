@@ -31,6 +31,14 @@
         <activity android:name=".Hexagon" />
         <activity android:name=".Pentagon" />
         <activity android:name=".Octagon" />
+        <activity android:name=".Three_d_page" />
+        <activity android:name=".Sphere" />
+        <activity android:name=".Cuboid" />
+        <activity android:name=".Cube" />
+        <activity android:name=".Frustum" />
+        <activity android:name=".Tetrahedron" />
+        <activity android:name=".Octahedron" />
+        <activity android:name=".Cylinder" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
