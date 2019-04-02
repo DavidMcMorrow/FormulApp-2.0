@@ -31,7 +31,7 @@ public class Maths_Homepage extends AppCompatActivity {
         quadrix_btn = (Button) findViewById(R.id.quadrix_btn);
         VandA_btn = (Button) findViewById(R.id.VandA_btn);
         two_d_btn = (Button) findViewById(R.id.two_d_btn);
-        two_d_btn = (Button) findViewById(R.id.three_d);
+        three_d = (Button) findViewById(R.id.three_d);
 
 
         Trig_btn.setOnClickListener(new View.OnClickListener() {
