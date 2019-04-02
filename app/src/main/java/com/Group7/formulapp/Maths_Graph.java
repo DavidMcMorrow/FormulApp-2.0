@@ -14,11 +14,16 @@ import android.os.Bundle;
 import com.jjoe64.graphview.GraphView;
 import com.jjoe64.graphview.series.*;
 import com.jjoe64.graphview.LegendRenderer;
+
 import org.nfunk.jep.JEP;
+
 import java.util.Random;
+
 import android.graphics.*;
 import android.view.*;
+
 import java.io.*;
+
 import android.net.*;
 
 
@@ -27,11 +32,15 @@ public class Maths_Graph extends AppCompatActivity {
     private LineGraphSeries<DataPoint> series;
     private String[] fctList;
     private String var;
-    private String lowerBound;
-    private String upperBound;
+    private String lowerBoundx;
+    private String upperBoundx;
+    private String lowerBoundy;
+    private String upperBoundy;
     private double x;
     private double minX;
     private double maxX;
+    private double minY;
+    private double maxY;
     private double y;
     private GraphView graph;
     public static final int STORAGE_PERMISSION_CODE = 1;
@@ -45,8 +54,10 @@ public class Maths_Graph extends AppCompatActivity {
         Intent intent = getIntent();
         fctList = intent.getStringArrayExtra("fct");
         var = intent.getStringExtra("variable");
-        lowerBound = intent.getStringExtra("lower");
-        upperBound = intent.getStringExtra("upper");
+        lowerBoundx = intent.getStringExtra("lowerx");
+        upperBoundx= intent.getStringExtra("upperx");
+        lowerBoundy = intent.getStringExtra("lowery");
+        upperBoundy= intent.getStringExtra("uppery");
 
         //We create the parser with a call to the library JEP
         JEP myParser = new JEP();
@@ -54,40 +65,44 @@ public class Maths_Graph extends AppCompatActivity {
         myParser.addStandardConstants();
 
         //Creation of a new Graph
-       graph = (GraphView) findViewById(R.id.graph);
+        graph = (GraphView) findViewById(R.id.graph);
         series = new LineGraphSeries<>();
 
         //Define the number of data point we use to build the graph
         int numPoints = 100000;
-        for (int j = 0; j < fctList.length -1; j++) {
+        for (int j = 0; j < fctList.length - 1; j++) {
 
-            if (fctList[j]!=null &&!fctList[j].isEmpty()) {
+            if (fctList[j] != null && !fctList[j].isEmpty()) {
 
 
                 // returns double primitive
-                minX = Double.parseDouble(lowerBound); //min x = lower bound define by user
-                maxX = Double.parseDouble(upperBound);
+                minX = Double.parseDouble(lowerBoundx); //min x = lower bound define by user for horizontal axis
+                maxX = Double.parseDouble(upperBoundx);
 
-                x=minX;
+                // returns double primitive
+                minY = Double.parseDouble(lowerBoundy); //min y = lower bound define by user for horizontal axis
+                maxY = Double.parseDouble(upperBoundy);
+
+                x = minX;
 
                 series = new LineGraphSeries<>();
 
                 for (int i = 0; i < numPoints; i++) {
-                    while(x<maxX){
-                    x = x + 0.1; //We increase the value of x of 0.1, to have a continue graph
-                    myParser.addVariable(var, x);
-                    //We parse each function(string) that the user entered
-                    myParser.parseExpression(fctList[j]);
-                    y = myParser.getValue();
-                    // We add the point to the series
-                    series.appendData(new DataPoint(x, y), true, 100000);
+                    while (x < maxX) {
+                        x = x + 0.1; //We increase the value of x of 0.1, to have a continue graph
+                        myParser.addVariable(var, x);
+                        //We parse each function(string) that the user entered
+                        myParser.parseExpression(fctList[j]);
+                        y = myParser.getValue();
+                        // We add the point to the series
+                        series.appendData(new DataPoint(x, y), true, 100000);
 
-                }
+                    }
                 }
                 //Now we add the series to the graph
                 graph.addSeries(series);
                 //Add a title to each function
-               series.setTitle(fctList[j]);
+                series.setTitle(fctList[j]);
                 graph.getLegendRenderer().setVisible(true);
                 graph.getLegendRenderer().setAlign(LegendRenderer.LegendAlign.TOP);
                 graph.getLegendRenderer().setBackgroundColor(Color.LTGRAY);
@@ -106,8 +121,8 @@ public class Maths_Graph extends AppCompatActivity {
         }
         // set manual X bounds
         graph.getViewport().setYAxisBoundsManual(true);
-        graph.getViewport().setMinY(-100);
-        graph.getViewport().setMaxY(100);
+        graph.getViewport().setMinY(minY);
+        graph.getViewport().setMaxY(maxY);
 
         graph.getViewport().setXAxisBoundsManual(true);
         graph.getViewport().setMinX(minX);
@@ -118,37 +133,34 @@ public class Maths_Graph extends AppCompatActivity {
         graph.getViewport().setScalableY(true);
 
 
-
-
-
-
-
     }
 
     // Take a capture of the graph and share it
-    public void takeSnap(View view){
+    public void takeSnap(View view) {
 
         if (ContextCompat.checkSelfPermission(this,
-                Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
-            // directly share it
+                Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) { // Check the permission
 
 
             // get the bitmap
             Bitmap bitmap = graph.takeSnapshot();
 
             try {
-                File file = new File(this.getExternalCacheDir(),"myImage.png");
+                File file = new File(this.getExternalCacheDir(), "myImage.png");
                 FileOutputStream fOut = new FileOutputStream(file);
-                bitmap.compress(Bitmap.CompressFormat.PNG,80,fOut);
+                bitmap.compress(Bitmap.CompressFormat.PNG, 80, fOut);
+
+                // Flushes the output stream and forces any buffered output bytes to be written out
                 fOut.flush();
                 fOut.close();
-                file.setReadable(true,false);
-                //Sharinf intent
+                file.setReadable(true, false);
+
+                //Sharing intent
                 Intent intent = new Intent(Intent.ACTION_SEND);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                intent.putExtra(Intent.EXTRA_STREAM,Uri.fromFile(file));
+                intent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(file));
                 intent.setType("image/png");
-                startActivity(Intent.createChooser(intent,"Share Image via"));
+                startActivity(Intent.createChooser(intent, "Share Image via"));
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
 
@@ -157,14 +169,14 @@ public class Maths_Graph extends AppCompatActivity {
             }
 
 
-        } else {
+        } else { // if we don't have the permission we ask for it
             requestStoragePermission();
         }
 
 
     }
 
-    // Permission necessary for the API above 23
+    // Request for permission
     private void requestStoragePermission() {
         if (ActivityCompat.shouldShowRequestPermissionRationale(this,
                 Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
@@ -176,7 +188,7 @@ public class Maths_Graph extends AppCompatActivity {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             ActivityCompat.requestPermissions(Maths_Graph.this,
-                                    new String[] {Manifest.permission.WRITE_EXTERNAL_STORAGE}, STORAGE_PERMISSION_CODE);
+                                    new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, STORAGE_PERMISSION_CODE);
                         }
                     })
                     .setNegativeButton("cancel", new DialogInterface.OnClickListener() {
@@ -189,7 +201,7 @@ public class Maths_Graph extends AppCompatActivity {
 
         } else {
             ActivityCompat.requestPermissions(this,
-                    new String[] {Manifest.permission.WRITE_EXTERNAL_STORAGE}, STORAGE_PERMISSION_CODE);
+                    new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, STORAGE_PERMISSION_CODE);
         }
     }
 }
