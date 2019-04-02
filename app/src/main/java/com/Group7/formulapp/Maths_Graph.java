@@ -18,6 +18,8 @@ import org.nfunk.jep.JEP;
 import java.util.Random;
 import android.graphics.*;
 import android.view.*;
+import java.io.*;
+import android.net.*;
 
 
 public class Maths_Graph extends AppCompatActivity {
@@ -129,10 +131,31 @@ public class Maths_Graph extends AppCompatActivity {
         if (ContextCompat.checkSelfPermission(this,
                 Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
             // directly share it
-            graph.takeSnapshotAndShare(this, "exampleGraph", "GraphViewSnapshot");
+
 
             // get the bitmap
-            Bitmap bitmap = graph.takeSnapshot();;
+            Bitmap bitmap = graph.takeSnapshot();
+
+            try {
+                File file = new File(this.getExternalCacheDir(),"myImage.png");
+                FileOutputStream fOut = new FileOutputStream(file);
+                bitmap.compress(Bitmap.CompressFormat.PNG,80,fOut);
+                fOut.flush();
+                fOut.close();
+                file.setReadable(true,false);
+                //Sharinf intent
+                Intent intent = new Intent(Intent.ACTION_SEND);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                intent.putExtra(Intent.EXTRA_STREAM,Uri.fromFile(file));
+                intent.setType("image/png");
+                startActivity(Intent.createChooser(intent,"Share Image via"));
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
 
         } else {
             requestStoragePermission();

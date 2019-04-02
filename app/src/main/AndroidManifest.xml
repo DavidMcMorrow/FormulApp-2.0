@@ -12,14 +12,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Maths_Setting_Graph" />
-
         <activity android:name=".Maths_Function" />
         <activity android:name=".Maths_Graph" />
+        <activity android:name=".MathsNumericIntegration" />
 
 
         <activity android:name=".MathsNumericIntegration"/>
 
-   
+
         <activity android:name=".uvast_calc"/>
 
         <activity android:name=".Getting_Area_Volume" />
