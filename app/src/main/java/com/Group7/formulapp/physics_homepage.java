@@ -11,8 +11,9 @@ public class physics_homepage extends AppCompatActivity {
     private Button Physics_btn1;
     private Button Physics_btn2;
     private Button Physics_btn3;
-
-
+    private Button Physics_btn4;
+    private Button Physics_btn5;
+    private Button Physics_btn6;
     @Override
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +23,9 @@ public class physics_homepage extends AppCompatActivity {
         Physics_btn1 = (Button) findViewById(R.id.Physics_btn1);         //declaring buttons
         Physics_btn2 = (Button) findViewById(R.id.Physics_btn2);
         Physics_btn3 = (Button) findViewById(R.id.Physics_btn3);
+        Physics_btn4 = (Button) findViewById(R.id.Physics_btn4);
+        Physics_btn5 = (Button) findViewById(R.id.Physics_btn5);
+        Physics_btn6 = (Button) findViewById(R.id.Physics_btn6);
 
         Physics_btn1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,6 +48,27 @@ public class physics_homepage extends AppCompatActivity {
                 openPhysicsPage3(); // function for opening page
             }
         });
+
+
+
+        Physics_btn4.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                openPhysicsPage4(); // function for opening page
+            }
+        });
+        Physics_btn5.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                openPhysicsPage5(); // function for opening page
+            }
+        });
+        Physics_btn6.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                openPhysicsPage6(); // function for opening page
+            }
+        });
     }
     public void openPhysicsPage1(){         //Not really sure how this work will have to look into it
         Intent intent = new Intent(this,mechanics_page.class);
@@ -55,6 +80,21 @@ public class physics_homepage extends AppCompatActivity {
     }
     public void openPhysicsPage3(){
         Intent intent = new Intent(this,light_page.class);
+        startActivity(intent);
+    }
+    public void openPhysicsPage4() {
+
+        Intent intent = new Intent(this, uvast_calc.class);
+        startActivity(intent);
+    }
+    public void openPhysicsPage5() {
+
+        Intent intent = new Intent(this, physics_experiments_homepage.class);
+        startActivity(intent);
+    }
+    public void openPhysicsPage6() {
+
+        Intent intent = new Intent(this, lens_calc.class);
         startActivity(intent);
     }
 
