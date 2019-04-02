@@ -2,19 +2,35 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.Group7.formulapp">
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/formulapp_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Maths_Setting_Graph" />
+
+        <activity android:name=".Maths_Function" />
+        <activity android:name=".Maths_Graph" />
+
+
+        <activity android:name=".MathsNumericIntegration"/>
+
+   
+        <activity android:name=".uvast_calc"/>
+
         <activity android:name=".Getting_Area_Volume" />
         <activity android:name=".light_page" />
         <activity android:name=".mechanics_page" />
         <activity android:name=".elec_page" />
+        <activity android:name=".lens_calc" />
         <activity android:name=".physics_homepage" />
+        <activity android:name=".physics_experiments_homepage" />
         <activity android:name=".Maths_Homepage" />
+        <activity android:name=".conservation_of_momentum" />
         <activity android:name=".Length_Area_page" />
         <activity android:name=".Physics_page" />
         <activity android:name=".Trig_page" />
