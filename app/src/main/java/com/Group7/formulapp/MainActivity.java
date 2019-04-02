@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<String> list;
     ArrayAdapter<String > adapter;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
 
         adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,list);
         listView.setAdapter(adapter);
+        listView.setVisibility(View.GONE);
 
     }
 
@@ -80,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onQueryTextSubmit(String query) {
                 searchView.clearFocus();
+                listView.setVisibility(View.VISIBLE);
                 if(list.contains(query)){
                     adapter.getFilter().filter(query);
                 }else{
@@ -91,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public boolean onQueryTextChange(String newText) {
+                listView.setVisibility(View.VISIBLE);
                 adapter.getFilter().filter(newText);
                 return false;
             }
