@@ -5,10 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".physics_homepage"
-    android:background="@drawable/page">
+    android:background="@drawable/formulapp_background">
 
 
     <TextView
+        style="@style/FAheader"
         android:id="@+id/Header"
         android:layout_width="296dp"
         android:layout_height="wrap_content"

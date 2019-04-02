@@ -4,10 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/page"
+    android:background="@drawable/formulapp_background"
     tools:context=".MainActivity">
 
     <TextView
+        style="@style/FAheader"
         android:id="@+id/Header"
         android:layout_width="296dp"
         android:layout_height="55dp"
@@ -18,10 +19,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:text="@string/table_of_contents"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:typeface="serif"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.585"
@@ -31,6 +29,7 @@
 
 
     <Button
+        style="@style/FAheader"
         android:id="@+id/maths_homepage_btn"
         android:layout_width="296dp"
         android:layout_height="66dp"
@@ -42,8 +41,7 @@
         android:layout_marginBottom="8dp"
         android:background="@null"
         android:text="@string/maths"
-        android:textSize="18sp"
-        android:typeface="serif"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.585"
@@ -52,6 +50,7 @@
         app:layout_constraintVertical_bias="0.342" />
 
     <Button
+        style="@style/FAheader"
         android:id="@+id/Physics_Homepage_btn"
         android:layout_width="297dp"
         android:layout_height="60dp"
@@ -63,8 +62,7 @@
         android:layout_marginBottom="8dp"
         android:background="@null"
         android:text="@string/physics"
-        android:textSize="18sp"
-        android:typeface="serif"
+       
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.663"
@@ -86,5 +84,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
 
 </android.support.constraint.ConstraintLayout>

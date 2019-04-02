@@ -11,7 +11,7 @@
     android:paddingLeft="0dp"
     android:paddingRight="0dp"
     android:orientation="vertical"
-    android:background="@drawable/page">
+    android:background="@drawable/formulapp_background">
 
     <TextView
         android:id="@+id/info"
