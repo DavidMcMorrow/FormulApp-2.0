@@ -60,6 +60,53 @@ public class MainActivity extends AppCompatActivity {
         listView.setAdapter(adapter);
         listView.setVisibility(View.GONE);
 
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if (position == 0) {
+                    Intent intent = new Intent(MainActivity.this, Trig_page.class);
+                    startActivity(intent);
+                    listView.setVisibility(View.GONE);
+                } else if(position == 1) {
+                    Intent intent = new Intent(MainActivity.this, quadrix.class);
+                    startActivity(intent);
+                    listView.setVisibility(View.GONE);
+                }else if(position == 2) {
+                    Intent intent = new Intent(MainActivity.this, Physics_page.class);
+                    startActivity(intent);
+                    listView.setVisibility(View.GONE);
+                }else if(position == 3) {
+                    Intent intent = new Intent(MainActivity.this, Trig_page.class);
+                    startActivity(intent);
+                    listView.setVisibility(View.GONE);
+                }else if(position == 4) {
+                    Intent intent = new Intent(MainActivity.this, Length_Area_page.class);
+                    startActivity(intent);
+                    listView.setVisibility(View.GONE);
+                }else if(position == 5) {
+                    Intent intent = new Intent(MainActivity.this, mechanics_page.class);
+                    startActivity(intent);
+                    listView.setVisibility(View.GONE);
+                }else if(position == 6) {
+                    Intent intent = new Intent(MainActivity.this, Maths_Setting_Graph.class);
+                    startActivity(intent);
+                    listView.setVisibility(View.GONE);
+                }else if(position == 7) {
+                    Intent intent = new Intent(MainActivity.this, MathsNumericIntegration.class);
+                    startActivity(intent);
+                    listView.setVisibility(View.GONE);
+                }else if(position == 8) {
+                    Intent intent = new Intent(MainActivity.this, uvast_calc.class);
+                    startActivity(intent);
+                    listView.setVisibility(View.GONE);
+                }else if(position == 9) {
+                    Intent intent = new Intent(MainActivity.this, Trig_page.class);
+                    startActivity(intent);
+                    listView.setVisibility(View.GONE);
+                }
+            }
+        });
+
     }
 
     public void openMaths_Homepage(){         //Not really sure how this work will have to look into it
@@ -98,6 +145,9 @@ public class MainActivity extends AppCompatActivity {
                 adapter.getFilter().filter(newText);
                 return false;
             }
+
+
+
         });
         return super.onCreateOptionsMenu(menu);
     }
