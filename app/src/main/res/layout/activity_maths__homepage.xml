@@ -11,7 +11,7 @@ tools:context=".Maths_Homepage">
 <Button
     android:id="@+id/Trig_btn"
     style="@style/FAbutton"
-    android:layout_marginTop="8dp"
+    android:layout_marginTop="32dp"
     android:text="Trigonmetry"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintHorizontal_bias="0.0"

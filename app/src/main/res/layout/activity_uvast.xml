@@ -15,6 +15,7 @@
 
     <TextView
         style = "@style/FAbody"
+        android:layout_marginTop="32dp"
         android:id="@+id/info"
         android:text="-Use '-999' = value you want.\n-Use '-888' = value you don't have.\n"
         app:layout_constraintEnd_toEndOf="parent"
