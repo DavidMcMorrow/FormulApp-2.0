@@ -121,7 +121,8 @@
         <item>Blue</item>
         <item>Dark</item>
         <item>Red</item>
-        <item>White</item>
+        <item>Green</item>
+        <item>Random</item>
     </string-array>
     <string name="search">Search</string>
 

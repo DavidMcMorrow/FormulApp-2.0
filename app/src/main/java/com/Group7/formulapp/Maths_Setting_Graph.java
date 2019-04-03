@@ -8,9 +8,11 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.*;
+import java.util.*;
+import android.widget.AdapterView.OnItemSelectedListener;
 
 
-public class Maths_Setting_Graph extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class Maths_Setting_Graph extends AppCompatActivity {
 
 
     private Button okButton;
@@ -26,6 +28,7 @@ public class Maths_Setting_Graph extends AppCompatActivity implements AdapterVie
     private String lowerx;
     private String uppery;
     private String lowery;
+    private HashMap<Integer, String> colorFctList;
 
     private TextView txt;
     private String[] fctList;
@@ -36,6 +39,7 @@ public class Maths_Setting_Graph extends AppCompatActivity implements AdapterVie
     private Double dupperx;
     private Double dlowery;
     private Double duppery;
+    private String  clickedColor;
 
 
     @Override
@@ -53,6 +57,7 @@ public class Maths_Setting_Graph extends AppCompatActivity implements AdapterVie
         upperText = (TextView) findViewById(R.id.txt_upper_bound);
         lowerText = (TextView) findViewById(R.id.txt_lower_bound);
         txt = (TextView) findViewById(R.id.txt);
+        colorFctList = new HashMap<Integer, String>();
 
 
         //We gather the information of the previous activity
@@ -114,6 +119,7 @@ public class Maths_Setting_Graph extends AppCompatActivity implements AdapterVie
 
     protected Spinner createNewSpinner(int id) {
 
+       final int numId = id;
         Spinner spin = new Spinner(this);
 
         ArrayAdapter<CharSequence> dataAdapter = ArrayAdapter.createFromResource(this, R.array.colors, android.R.layout.simple_spinner_item);
@@ -125,7 +131,19 @@ public class Maths_Setting_Graph extends AppCompatActivity implements AdapterVie
 
         //attaching  data adapter to spinner
         spin.setAdapter(dataAdapter);
-        spin.setOnItemSelectedListener(this);
+        spin.setOnItemSelectedListener(new OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                clickedColor = parent.getItemAtPosition(position).toString();
+                Toast.makeText(parent.getContext(), clickedColor, Toast.LENGTH_SHORT).show();
+                colorFctList.put(numId,clickedColor);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+        // TODO Auto-generated method stub
+            }
+        });
 
         if (id == 0) {
 
@@ -140,13 +158,16 @@ public class Maths_Setting_Graph extends AppCompatActivity implements AdapterVie
         if (id == 1) {
             pbis.addRule(RelativeLayout.BELOW, txt.getId());
             previous = id;
-            pbis.addRule(RelativeLayout.RIGHT_OF, id);
+            pbis.addRule(RelativeLayout.ALIGN_BASELINE, id);
+            pbis.addRule(RelativeLayout.ALIGN_PARENT_RIGHT, id);
 
         } else {
-
+                if(id!=0){
             pbis.addRule(RelativeLayout.BELOW, previous);
-            previous = id;
-            pbis.addRule(RelativeLayout.RIGHT_OF, id);
+            pbis.addRule(RelativeLayout.ALIGN_PARENT_RIGHT, previous);
+            previous = id;}
+
+
 
         }
 
@@ -172,6 +193,8 @@ public class Maths_Setting_Graph extends AppCompatActivity implements AdapterVie
         intent.putExtra("upperx", upperx);
         intent.putExtra("lowery", lowery);
         intent.putExtra("uppery", uppery);
+        intent.putExtra("color", clickedColor);
+        intent.putExtra("hashmap",colorFctList);
 
         if (checkSetting(view, intent)) {
 
@@ -214,24 +237,11 @@ public class Maths_Setting_Graph extends AppCompatActivity implements AdapterVie
         return true;
     }
 
-
+//Upper need to be bigger than lower boundarie
     public boolean upperValid(double lower, double upper) {
 
         return (lower < upper);
     }
 
-    //For the spinner
-    @Override
-    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
-        String text = parent.getItemAtPosition(position).toString();
-        Toast.makeText(parent.getContext(), text, Toast.LENGTH_SHORT).show();
-
-
-    }
-
-    @Override
-    public void onNothingSelected(AdapterView<?> parent) {
-// TODO Auto-generated method stub
-    }
 }

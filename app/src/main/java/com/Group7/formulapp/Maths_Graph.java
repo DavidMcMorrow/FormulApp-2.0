@@ -17,6 +17,7 @@ import com.jjoe64.graphview.LegendRenderer;
 
 import org.nfunk.jep.JEP;
 
+import java.util.HashMap;
 import java.util.Random;
 
 import android.graphics.*;
@@ -36,12 +37,14 @@ public class Maths_Graph extends AppCompatActivity {
     private String upperBoundx;
     private String lowerBoundy;
     private String upperBoundy;
+    private String color;
     private double x;
     private double minX;
     private double maxX;
     private double minY;
     private double maxY;
     private double y;
+    private HashMap<Integer, String> colorFctList;
     private GraphView graph;
     public static final int STORAGE_PERMISSION_CODE = 1;
 
@@ -58,6 +61,8 @@ public class Maths_Graph extends AppCompatActivity {
         upperBoundx= intent.getStringExtra("upperx");
         lowerBoundy = intent.getStringExtra("lowery");
         upperBoundy= intent.getStringExtra("uppery");
+        //color = intent.getStringExtra("color");
+        colorFctList=(HashMap<Integer, String>) intent.getSerializableExtra("hashmap");
 
         //We create the parser with a call to the library JEP
         JEP myParser = new JEP();
@@ -72,7 +77,7 @@ public class Maths_Graph extends AppCompatActivity {
         int numPoints = 100000;
         for (int j = 0; j < fctList.length - 1; j++) {
 
-            if (fctList[j] != null && !fctList[j].isEmpty()) {
+            if (fctList[j] != null && !fctList[j].isEmpty()) { // for each function enter by the user
 
 
                 // returns double primitive
@@ -107,14 +112,14 @@ public class Maths_Graph extends AppCompatActivity {
                 graph.getLegendRenderer().setAlign(LegendRenderer.LegendAlign.TOP);
                 graph.getLegendRenderer().setBackgroundColor(Color.LTGRAY);
 
-                //Change color for each function
-                Random rand = new Random();
-                float r = rand.nextFloat();
-                float g = rand.nextFloat();
-                float b = rand.nextFloat();
 
-                int color = Color.argb(255, rand.nextInt(256), rand.nextInt(256), rand.nextInt(256));
-                series.setColor(color);
+
+
+               //Change color for each function
+
+                String color = colorFctList.get(j);
+               int intColor = colorTreatment(color);
+                series.setColor(intColor);
 
 
             }
@@ -203,5 +208,32 @@ public class Maths_Graph extends AppCompatActivity {
             ActivityCompat.requestPermissions(this,
                     new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, STORAGE_PERMISSION_CODE);
         }
+    }
+
+
+    public int colorTreatment(String color){
+        int numColor=0;
+        switch (color){
+            case "Blue":
+                numColor= getResources().getColor(R.color.blue);
+                break;
+            case "Dark":
+                numColor= getResources().getColor(R.color.colorPrimaryDark);
+                break;
+
+            case "Red":
+                numColor= getResources().getColor(R.color.colorAccent);
+                break;
+
+            case "Green":
+                numColor= getResources().getColor(R.color.colorPrimary);
+                break;
+
+            case "Random":
+                Random rand = new Random();
+                numColor = Color.argb(255, rand.nextInt(256), rand.nextInt(256), rand.nextInt(256));
+                break;
+        }
+return numColor;
     }
 }
