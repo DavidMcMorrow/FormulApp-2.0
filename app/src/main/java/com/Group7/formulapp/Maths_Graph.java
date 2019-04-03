@@ -114,7 +114,6 @@ public class Maths_Graph extends AppCompatActivity {
 
 
 
-
                //Change color for each function
 
                 String color = colorFctList.get(j);
