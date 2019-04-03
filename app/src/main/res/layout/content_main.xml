@@ -26,247 +26,216 @@
             android:orientation="vertical">
 
             <TextView
+                style = "@style/FAheader2"
                 android:id="@+id/textView76"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="10dp"
-                android:paddingTop="10dp"
-                android:textStyle="bold"
+
                 android:text="@string/odd_even_identities" />
 
             <TextView
+                style = "@style/FAbody"
                 android:id="@+id/textView77"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="20dp"
+
                 android:text="@string/sin_x_sin_x" />
 
             <TextView
+                style = "@style/FAbody"
                 android:id="@+id/textView78"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="20dp"
+
+
                 android:text="@string/cos_x_cos_x" />
 
             <TextView
+                style = "@style/FAbody"
                 android:id="@+id/textView79"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="20dp"
+
+
                 android:text="@string/tan_x_tan_x" />
 
             <TextView
+                style = "@style/FAheader2"
                 android:id="@+id/textView83"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="10dp"
-                android:paddingTop="10dp"
-                android:textStyle="bold"
+
                 android:text="@string/angle_sum_and_difference_identities" />
 
             <TextView
+                style = "@style/FAbody"
                 android:id="@+id/textView84"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="20dp"
+
+
                 android:text="@string/sin_sin_cos_cos_sin1" />
 
             <TextView
+                style = "@style/FAbody"
                 android:id="@+id/textView85"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="20dp"
+
+
                 android:text="@string/sin_sin_cos_cos_sin" />
 
             <TextView
+                style = "@style/FAbody"
                 android:id="@+id/textView86"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="20dp"
+
+
                 android:text="@string/cos_cos_cos_sin_sin1" />
 
             <TextView
+                style = "@style/FAbody"
                 android:id="@+id/textView87"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="20dp"
+
                 android:text="@string/cos_cos_cos_sin_sin" />
 
             <TextView
+                style = "@style/FAbody"
                 android:id="@+id/textView88"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="20dp"
+
+
                 android:text="@string/tan_1_tan_tan_tan_tan" />
 
             <TextView
+                style = "@style/FAbody"
                 android:id="@+id/textView89"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="20dp"
+
+
                 android:text="@string/tan_1_tan_tan_tan_tan1" />
 
             <TextView
+                style = "@style/FAheader2"
                 android:id="@+id/textView90"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="10dp"
-                android:paddingTop="10dp"
-                android:textStyle="bold"
+
                 android:text="@string/product_identities" />
 
             <TextView
+                style = "@style/FAbody"
                 android:id="@+id/textView91"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="20dp"
+
                 android:text="@string/_2_sin_x_cos_y_sin_x_y_sin_x_y" />
 
             <TextView
+                style = "@style/FAbody"
                 android:id="@+id/textView92"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingLeft="20dp"
+
                 android:text="@string/_2_cos_x_sin_y_sin_x_y_sin_x_y" />
 
             <TextView
+                style = "@style/FAbody"
                 android:id="@+id/textView93"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="20dp"
+
                 android:text="@string/_2_cos_x_cos_y_cos_x_y_cos_x_y" />
 
             <TextView
+                style = "@style/FAbody"
                 android:id="@+id/textView94"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="20dp"
+
+
                 android:text="@string/_2_sin_x_sin_y_cos_x_y_cos_x_y" />
 
             <TextView
+                style = "@style/FAheader2"
                 android:id="@+id/textView95"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="10dp"
-                android:paddingTop="10dp"
-                android:textStyle="bold"
+
                 android:text="@string/double_angle_identities" />
 
             <TextView
+                style = "@style/FAbody"
                 android:id="@+id/textView96"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="20dp"
+
                 android:text="@string/sin_2x_2sin_x_cos_x" />
 
             <TextView
+                style = "@style/FAbody"
                 android:id="@+id/textView97"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="20dp"
+
                 android:text="@string/cos_2x_cos_x_cos_x_sin_x_sin_x" />
 
             <TextView
+                style = "@style/FAbody"
                 android:id="@+id/textView98"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="20dp"
+
                 android:text="@string/cos_2x_2_cos_2_x_1" />
 
             <TextView
+                style = "@style/FAbody"
                 android:id="@+id/textView99"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="20dp"
+
 
                 android:text="@string/cos_2x_2_cos_x_1" />
 
             <TextView
+                style = "@style/FAbody"
                 android:id="@+id/textView100"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="20dp"
+
+
                 android:text="@string/cos_2x_1_2_sin_2_x" />
 
             <TextView
+                style = "@style/FAbody"
                 android:id="@+id/textView101"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="20dp"
+
+
                 android:text="@string/tan_2x_2tn_x_1_tan_2_x" />
 
             <TextView
+                style = "@style/FAheader2"
                 android:id="@+id/textView106"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="10dp"
-                android:paddingTop="10dp"
-                android:textStyle="bold"
+
+
                 android:text="@string/sum_to_product_identities" />
 
             <TextView
+                style = "@style/FAbody"
                 android:id="@+id/textView107"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="20dp"
+
+
                 android:text="@string/sin_x_sin_y_2_sin_x_y_2_cos_x_y_2" />
 
             <TextView
+                style = "@style/FAbody"
                 android:id="@+id/textView108"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="20dp"
                 android:text="@string/sin_x_sin_y_2_cos_x_y_2_sin_x_y_2" />
 
             <TextView
+                style = "@style/FAbody"
                 android:id="@+id/textView109"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="20dp"
+
+
                 android:text="@string/cos_x_cos_y_2_cos_x_y_2_cos_x_y_2" />
 
             <TextView
+                style = "@style/FAbody"
                 android:id="@+id/textView110"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="20dp"
+
                 android:text="@string/cos_x_cos_y_2_sin_x_y_2_sin_x_y_2" />
 
             <TextView
+                style = "@style/FAheader2"
                 android:id="@+id/textView1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="10dp"
-                android:paddingTop="10dp"
-                android:textStyle="bold"
+
                 android:text="@string/periodicity_identities_degrees" />
 
             <TextView
+                style = "@style/FAbody"
                 android:id="@+id/textView2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="20dp"
+
                 android:text="@string/sin_x_360_sin_x" />
 
             <TextView
+                style = "@style/FAbody"
                 android:id="@+id/textView3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="20dp"
+
                 android:text="@string/sin_x_360_cos_x" />
 
             <TextView
+                style = "@style/FAbody"
                 android:id="@+id/textView4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="20dp"
+
                 android:text="@string/tan_x_180_tan_x" />
 
             <TextView
+                style = "@style/FAbody"
                 android:id="@+id/textView5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="20dp"
+
                 android:text="@string/cot_x_180_cot_x" />
 
 

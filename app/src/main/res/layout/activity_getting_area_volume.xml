@@ -30,21 +30,8 @@
             android:orientation="vertical">
 
 
-
             <TextView
-                style="@style/FAheader"
-                android:id="@+id/title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="47dp"
-                android:text="Area and Volume"
-
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                style="@style/FAbody"
+                style="@style/FAheader2"
                 android:id="@+id/CylinderHeader"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -79,10 +66,9 @@
                 app:layout_constraintTop_toBottomOf="@+id/CylinderRadius" />
 
             <Button
+                style ="@style/FAbutton"
                 android:id="@+id/solve_button"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+
                 android:text="Area and Volume"
                 app:layout_constraintTop_toBottomOf="@+id/Cylinder_length"/>
 
@@ -101,7 +87,7 @@
 
 
             <TextView
-                style="@style/FAheader"
+                style="@style/FAheader2"
                 android:id="@+id/ConeHeader"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -147,10 +133,9 @@
                 app:layout_constraintTop_toBottomOf="@+id/Cone_length" />
 
             <Button
+                style ="@style/FAbutton"
                 android:id="@+id/solve_cone_button"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+
                 android:text="Area and Volume"
                 app:layout_constraintTop_toBottomOf="@+id/Cone_length"/>
 

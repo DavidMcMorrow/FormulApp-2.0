@@ -7,33 +7,20 @@
     android:background="@drawable/formulapp_background"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/Header"
-        style="@style/FAheader"
-        android:text="@string/table_of_contents"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
 
     <Button
         android:id="@+id/maths_homepage_btn"
-        style="@style/FAheader"
+        style="@style/FAbutton"
+
         android:text="@string/maths"
-        android:layout_width="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/Header"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/Physics_Homepage_btn"
-        style="@style/FAheader"
+        style="@style/FAbutton"
         android:text="@string/physics"
         app:layout_constraintTop_toBottomOf="@+id/maths_homepage_btn"
         app:layout_constraintBottom_toBottomOf="parent"

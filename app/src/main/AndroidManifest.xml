@@ -11,20 +11,48 @@
         android:theme="@style/AppTheme">
 
    
-        <activity android:name=".uvast_calc"/>
-        <activity android:name=".Getting_Area_Volume" />
-        <activity android:name=".light_page" />
-        <activity android:name=".mechanics_page" />
-        <activity android:name=".elec_page" />
-        <activity android:name=".lens_calc" />
-        <activity android:name=".physics_homepage" />
-        <activity android:name=".physics_experiments_homepage" />
-        <activity android:name=".Maths_Homepage" />
-        <activity android:name=".conservation_of_momentum" />
-        <activity android:name=".Length_Area_page" />
-        <activity android:name=".Physics_page" />
-        <activity android:name=".Trig_page" />
-        <activity android:name=".quadrix" />
+        <activity android:name=".uvast_calc"
+            android:label ="Speed, Distance, Time Calculator"/>
+
+        <activity android:name=".Getting_Area_Volume"
+            android:label ="Area and Volume"/>
+
+        <activity android:name=".light_page"
+            android:label ="Light and Sound Formula"/>
+
+        <activity android:name=".mechanics_page"
+            android:label ="Mechanics"/>
+
+        <activity android:name=".elec_page"
+            android:label ="Electricity"/>
+
+        <activity android:name=".lens_calc"
+            android:label ="Lense Calculator"/>
+
+        <activity android:name=".physics_homepage"
+            android:label ="Physics"/>
+
+        <activity android:name=".physics_experiments_homepage"
+            android:label ="Experiments"/>
+
+        <activity android:name=".Maths_Homepage"
+                android:label ="Maths"/>
+
+        <activity android:name=".conservation_of_momentum"
+            android:label ="Conservation of Momentum"/>
+
+        <activity android:name=".Length_Area_page"
+            android:label ="Length and Area"/>
+
+        <activity android:name=".Physics_page"
+            android:label ="Physics Constants"/>
+
+        <activity android:name=".Trig_page"
+            android:label ="Trigonometry"/>
+
+        <activity android:name=".quadrix"
+            android:label ="Quadtratics Solver"/>
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

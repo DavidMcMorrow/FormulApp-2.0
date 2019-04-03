@@ -30,29 +30,9 @@
             android:orientation="vertical">
 
             <TextView
-                style="@style/FAheader"
-                android:id="@+id/Header"
-                android:layout_width="327dp"
-                android:layout_height="55dp"
-                android:layout_marginStart="67dp"
-                android:layout_marginLeft="67dp"
-                android:layout_marginTop="28dp"
-                android:layout_marginEnd="32dp"
-                android:layout_marginRight="32dp"
-                android:text="@string/surface_area_and_volume"
-
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                style="@style/FAheader"
+                style="@style/FAheader2"
                 android:id="@+id/textView62"
-                android:layout_width="180dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="15dp"
+
                 android:text="Cylinder"
 
                 app:layout_constraintStart_toStartOf="parent"
@@ -64,7 +44,7 @@
                 android:layout_height="190dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
-                android:layout_marginTop="60dp"
+                android:layout_marginTop="8dp"
                 android:scaleType="centerInside"
                 app:layout_constraintEnd_toStartOf="@+id/textView57"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -73,14 +53,12 @@
                 app:srcCompat="@drawable/cylinder" />
 
             <TextView
-                style="@style/FAheader"
+                style="@style/FAbody"
                 android:id="@+id/textView57"
-                android:layout_width="250dp"
-                android:layout_height="100dp"
-                android:layout_marginTop="45dp"
+
                 android:text="Area = 2*pi*r*h
-                               Volume = pi*h*r^2"
-                android:textSize="30sp"
+Volume = pi*h*r^2"
+
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/imageView"
@@ -88,13 +66,9 @@
 
 
             <TextView
-                style="@style/FAheader"
+                style="@style/FAheader2"
                 android:id="@+id/textView63"
-                android:layout_width="122dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="32dp"
+
                 android:text="Cone"
 
                 app:layout_constraintStart_toStartOf="parent"
@@ -106,21 +80,17 @@
                 android:layout_height="170dp"
                 android:layout_marginStart="40dp"
                 android:layout_marginLeft="40dp"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="8dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView63"
                 app:srcCompat="@drawable/cone" />
 
             <TextView
-                style="@style/FAheader"
+                style="@style/FAbody"
                 android:id="@+id/textView64"
-                android:layout_width="250dp"
-                android:layout_height="120dp"
-                android:layout_marginTop="111dp"
-                android:layout_marginEnd="38dp"
-                android:layout_marginRight="38dp"
+
                 android:text="Area = pi*r*l
-                      Volume = (1/3)*pi*h*r^2"
+Volume = (1/3)*pi*h*r^2"
 
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView57" />
@@ -128,13 +98,9 @@
             <TextView
                 style="@style/FAheader"
                 android:id="@+id/textView66"
-                android:layout_width="122dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="32dp"
+
                 android:text="Circle"
-                android:textSize="40sp"
+
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
@@ -144,22 +110,18 @@
                 android:layout_height="170dp"
                 android:layout_marginStart="40dp"
                 android:layout_marginLeft="40dp"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="8dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView63"
                 app:srcCompat="@drawable/sphere" />
 
             <TextView
-                style="@style/FAheader"
+                style="@style/FAbody"
                 android:id="@+id/textView67"
-                android:layout_width="250dp"
-                android:layout_height="120dp"
-                android:layout_marginTop="111dp"
-                android:layout_marginEnd="38dp"
-                android:layout_marginRight="38dp"
+
                 android:text="Area = 4*pi*r^2
-                      Volume = (4/3)*pi*r^3"
-                android:textSize="30sp"
+Volume = (4/3)*pi*r^3"
+
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView57" />
 

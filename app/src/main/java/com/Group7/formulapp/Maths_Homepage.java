@@ -20,7 +20,6 @@ public class Maths_Homepage extends AppCompatActivity {
         setContentView(R.layout.activity_maths__homepage);
 
 
-
         Trig_btn = (Button) findViewById(R.id.Trig_btn);         //declaring buttons
         Physics_btn = (Button) findViewById(R.id.Physics_btn);
         LandA_btn = (Button) findViewById(R.id.LandA_btn);
@@ -82,4 +81,6 @@ public class Maths_Homepage extends AppCompatActivity {
         Intent intent = new Intent(this,Getting_Area_Volume.class);
         startActivity(intent);
     }
+
+
 }

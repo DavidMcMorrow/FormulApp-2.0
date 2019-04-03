@@ -18,6 +18,9 @@
     <style name="ActionBar" >
         <item name = "android:background">@color/colorGreen</item>
         <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:typeface" >sans</item>
+        <item name= "android:textStyle">bold</item>
     </style>
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
@@ -28,31 +31,58 @@
         <item name= "android:textStyle">bold</item>
         <item name= "android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginStart">42dp</item>
-        <item name= "android:layout_marginLeft">42dp</item>
-        <item name="android:layout_marginTop">32dp</item>
+        <item name="android:layout_marginStart">36dp</item>
+        <item name= "android:layout_marginLeft">36dp</item>
+        <item name="android:layout_marginTop">24dp</item>
         <item name="android:layout_marginEnd">8dp</item>
         <item name="android:layout_marginRight">8dp</item>
-        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:layout_marginBottom">2dp</item>
         <item name="android:background">@null</item>
     </style>
-    <style name="FAbody" >
-        <item name= "android:textSize">20sp</item>
+    <style name="FAheader2" >
+        <item name= "android:textSize">22sp</item>
         <item name="android:textColor">@color/colorWhite</item>
         <item name="android:typeface" >sans</item>
         <item name= "android:textStyle">bold</item>
         <item name= "android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginStart">42dp</item>
-        <item name= "android:layout_marginLeft">42dp</item>
-        <item name="android:layout_marginTop">32dp</item>
+        <item name="android:layout_marginStart">40dp</item>
+        <item name= "android:layout_marginLeft">40dp</item>
+        <item name="android:layout_marginTop">12dp</item>
         <item name="android:layout_marginEnd">8dp</item>
         <item name="android:layout_marginRight">8dp</item>
-        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:layout_marginBottom">2dp</item>
         <item name="android:background">@null</item>
     </style>
-    <style name = "FAbutton">
-        <item name = "android:layout_marginLeft"></item>
+    <style name="FAbody" >
+        <item name= "android:textSize">16sp</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textColorHint">@color/colorWhite</item>
+        <item name="android:typeface" >sans</item>
+        <item name= "android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">44dp</item>
+        <item name= "android:layout_marginLeft">44dp</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:layout_marginBottom">2dp</item>
+        <item name="android:background">@null</item>
+    </style>
+    <style name="FAbutton" >
+        <item name= "android:textSize">16sp</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textColorHint">@color/colorWhite</item>
+        <item name="android:typeface" >sans</item>
+        <item name= "android:layout_width">match_parent</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:layout_marginStart">42dp</item>
+        <item name= "android:layout_marginLeft">42dp</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:layout_marginBottom">2dp</item>
+        <item name="android:background">@drawable/divider</item>
     </style>
 
 </resources>

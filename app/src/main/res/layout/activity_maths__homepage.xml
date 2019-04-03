@@ -7,35 +7,27 @@ android:layout_height="match_parent"
 android:background="@drawable/formulapp_background"
 tools:context=".Maths_Homepage">
 
-<TextView
-    style="@style/FAheader"
-    android:id="@+id/Header"
-    android:text="Maths"
+
+<Button
+    android:id="@+id/Trig_btn"
+    style="@style/FAbutton"
+    android:layout_marginTop="8dp"
+    android:text="Trigonmetry"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintHorizontal_bias="0.0"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent" />
 
-
-<Button
-    style="@style/FAbody"
-    android:id="@+id/Trig_btn"
-    android:text="Trigonmetry"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintHorizontal_bias="0.0"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/Header" />
-
 <Button
     android:id="@+id/Physics_btn"
-    style="@style/FAbody"
+    style="@style/FAbutton"
     android:text="@string/_2_fundamental_physical_constants"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintHorizontal_bias="0.0"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@+id/Trig_btn" />
 <Button
-    style="@style/FAbody"
+    style="@style/FAbutton"
     android:id="@+id/LandA_btn"
     android:text="@string/surface_area_and_volume"
     app:layout_constraintEnd_toEndOf="parent"
@@ -44,7 +36,7 @@ tools:context=".Maths_Homepage">
     app:layout_constraintTop_toBottomOf="@+id/Physics_btn" />
 
 <Button
-    style="@style/FAbody"
+    style="@style/FAbutton"
     android:id="@+id/quadrix_btn"
     android:text="@string/solve_equation"
     app:layout_constraintEnd_toEndOf="parent"
@@ -52,13 +44,13 @@ tools:context=".Maths_Homepage">
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@+id/LandA_btn" />
 
-    <Button
-        style="@style/FAbody"
-        android:id="@+id/VandA_btn"
-        android:text="Get Area and Volume"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/quadrix_btn" />
+<Button
+    style="@style/FAbutton"
+    android:id="@+id/VandA_btn"
+    android:text="Get Area and Volume"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/quadrix_btn" />
 
 </android.support.constraint.ConstraintLayout>

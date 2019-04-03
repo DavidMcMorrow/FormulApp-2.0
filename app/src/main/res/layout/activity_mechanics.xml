@@ -29,18 +29,10 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/Header"
-                android:text="Mechanics Formulae"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:text="Mechanics Formulae" />
-
 
             <TextView
-                style="@style/FAbody"
                 android:id="@+id/textView67"
+                style="@style/FAbody"
 
                 android:text="Equations of Motion:\n
 -> v = u + at\n

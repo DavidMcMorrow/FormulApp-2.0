@@ -14,51 +14,51 @@
     android:background="@drawable/formulapp_background">
 
     <EditText
+        style= "@style/FAbody"
         android:id="@+id/et_u2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
         android:ems="10"
         android:hint="distance between object and lens 'u'"
         android:inputType="numberDecimal|numberSigned" />
 
     <EditText
+        style= "@style/FAbody"
         android:id="@+id/et_v2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+
         android:ems="10"
         android:hint="distance between image and lens 'v'"
         android:inputType="numberDecimal|numberSigned" />
 
     <Button
+        style= "@style/FAbutton"
         android:id="@+id/bt_go2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+
         android:text="SOLVE" />
 
     <Button
+        style= "@style/FAbutton"
         android:id="@+id/clr"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+
         android:text="CLEAR" />
 
     <TextView
+        style= "@style/FAbody"
         android:id="@+id/result01"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+
         android:text=""
-        android:textSize="24dp"/>
+        />
 
     <TextView
+        style= "@style/FAbody"
         android:id="@+id/result02"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+
         android:text=""
-        android:textSize="24dp"/>
+       />
 
     <TextView
+        style= "@style/FAbody"
         android:id="@+id/result03"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+
         android:text=""
-        android:textSize="24dp"/>
+        />
 </LinearLayout>

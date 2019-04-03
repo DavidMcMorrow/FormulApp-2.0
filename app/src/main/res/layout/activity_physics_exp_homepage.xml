@@ -8,30 +8,19 @@
     android:background="@drawable/formulapp_background">
 
 
-    <TextView
-        style="@style/FAheader"
-        android:id="@+id/Header"
-
-        android:text="Physics Experiments"
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
     <Button
-        style="@style/FAbody"
         android:id="@+id/Physics_exp_btn1"
-        android:text="Conservation of Momentum"
+        style="@style/FAbutton"
+        android:layout_marginTop="8dp"
 
+        android:text="Conservation of Momentum"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Header" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        style="@style/FAbody"
+        style="@style/FAbutton"
         android:id="@+id/Physics_exp_btn2"
         android:text="EXP1"
         app:layout_constraintEnd_toEndOf="parent"
@@ -40,7 +29,7 @@
         app:layout_constraintTop_toBottomOf="@+id/Physics_exp_btn1" />
 
     <Button
-        style="@style/FAbody"
+        style="@style/FAbutton"
         android:id="@+id/Physics_exp_btn3"
         android:text="EXP2"
         app:layout_constraintEnd_toEndOf="parent"
