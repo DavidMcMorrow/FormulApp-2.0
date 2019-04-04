@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?><LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="0dp"
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:orientation="vertical"
+    android:background="@drawable/page">
+
+    <TextView
+        android:id="@+id/quadrix"
+        style="@style/pageHeaders"
+        android:text="Quadratic Equations"/>
+
+    <EditText
+        android:id="@+id/et_a"
+        style="@style/parameterEntry"
+        android:hint="a"
+        android:inputType="numberDecimal|numberSigned" />
+
+    <EditText
+        android:id="@+id/et_b"
+        style="@style/parameterEntry"
+        android:hint="b"
+        android:inputType="numberDecimal|numberSigned" />
+
+    <EditText
+        android:id="@+id/et_c"
+        style="@style/parameterEntry"
+        android:hint="c"
+        android:inputType="numberDecimal|numberSigned" />
+
+    <Button
+        android:id="@+id/bt_go"
+        style="@style/solveButtons"
+        android:text="Solve"
+        android:textAllCaps="false" />
+
+    <TextView
+        android:id="@+id/tv_result"
+        style="@style/solveButtons"
+        android:text="" />
+
+</LinearLayout>

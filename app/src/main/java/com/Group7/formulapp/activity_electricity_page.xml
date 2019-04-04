@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/page"
+    tools:context="com.Group7.formulapp.elec_page">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:scrollbarStyle="outsideInset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/electricityFormulaeHeader"
+                style="@style/pageHeaders"
+                android:text="@string/electricity_formulae"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/coulombs_law_title"
+                style="@style/formulaTitleText"
+                android:text="@string/coulombs_law_title"
+                app:layout_constraintTop_toBottomOf="@+id/electricityFormulaeHeader" />
+
+            <TextView
+                android:id="@+id/coulombs_law_formula"
+                style="@style/formulaText"
+                android:text="@string/coulombs_law_formula"
+                app:layout_constraintLeft_toRightOf="@+id/coulombs_law_title"
+                app:layout_constraintTop_toBottomOf="@+id/electricityFormulaeHeader" />
+
+            <TextView
+                android:id="@+id/field_strength_title"
+                style="@style/formulaTitleText"
+                android:text="@string/field_strength_title"
+                app:layout_constraintTop_toBottomOf="@+id/coulombs_law_title" />
+
+            <TextView
+                android:id="@+id/field_strength_formula"
+                style="@style/formulaText"
+                android:text="@string/field_strength_formula"
+                app:layout_constraintLeft_toRightOf="@+id/field_strength_title"
+                app:layout_constraintTop_toBottomOf="@+id/coulombs_law_formula" />
+
+            <TextView
+                android:id="@+id/potential_difference_title"
+                style="@style/formulaTitleText"
+                android:text="@string/potential_difference_title"
+                app:layout_constraintTop_toBottomOf="@+id/field_strength_title" />
+
+            <TextView
+                android:id="@+id/potential_difference_formula"
+                style="@style/formulaText"
+                android:text="@string/potential_difference_formula"
+                app:layout_constraintLeft_toRightOf="@+id/potential_difference_title"
+                app:layout_constraintTop_toBottomOf="@+id/field_strength_formula" />
+
+            <TextView
+                android:id="@+id/ohms_law_title"
+                style="@style/formulaTitleText"
+                android:text="@string/ohms_law_title"
+                app:layout_constraintTop_toBottomOf="@+id/potential_difference_title" />
+
+            <TextView
+                android:id="@+id/ohms_law_formula"
+                style="@style/formulaText"
+                android:text="@string/ohms_law_formula"
+                app:layout_constraintLeft_toRightOf="@+id/ohms_law_title"
+                app:layout_constraintTop_toBottomOf="@+id/potential_difference_formula" />
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="electricity_formulae">Electricity Formulae</string>
+    <string name="coulombs_law_title">Coulomb\'s Law: </string>
+    <string name="coulombs_law_formula">F = (q_1 q_2)/(4πɛd^2 )</string>
+    <string name="field_strength_title">Field Strength: </string>
+    <string name="field_strength_formula">E = F/q</string>
+    <string name="potential_difference_title">Potential Difference: </string>
+    <string name="potential_difference_formula">V = W/q</string>
+    <string name="ohms_law_title">Ohm\'s Law: </string>
+    <string name="ohms_law_formula">V = IR</string>
+    <string name="resistivity_title">Resistivity: </string>
+    <string name="resistivity_formula">ρ = RA/I</string>
+    <string name="resistors_in_series_title">Resistors in Series: </string>
+    <string name="resistors_in_series_formula">R = R_1 + R_2 + … + R_n</string>
+    <string name="resistors_in_parallel_title">Resistors in Parallel: </string>
+    <string name="resistors_in_parallel_formula">1/R = 1/R_1  + 1/R_2  + … + 1/R_n</string>
+    <string name="wheastone_bridge_title">Wheatstone Bridge: </string>
+    <string name="wheastone_bridge_formula">R_1/R_2  = R_3/R_4</string>
+    <string name="joules_law_title">Joule\'s Law: </string>
+    <string name="joules_law_formula">P = I^2R</string>
+    <string name="force_on_current_carrying_conductor_title">Force on Current-carrying conductor: </string>
+    <string name="force_on_current_carrying_conductor_formuala">F = IlB</string>
+    <string name="force_on_a_charged_particle_title">Force on Charged Particle: </string>
+    <string name="force_on_a_charged_particle_formula">F = qvB</string>
+    <string name="induced_emf_title">Induced emf: </string>
+    <string name="induced_emf_formula">E = (-dФ)/dt</string>
+    <string name="capacitance_title">Capacitance: </string>
+    <string name="capacitance_formula">C = q/V</string>
+    <string name="parallel_plate_capacitor_title">Parallel-plate capacitor: </string>
+    <string name="parallel_plate_capacitor_formula">C = Aε/d</string>
+    <string name="energy_stored_in_capacitor_title">Energy stored in Capacitor: </string>
+    <string name="energy_stored_in_capacitor_formula">W = CV^2/2</string>
+    <string name="power_title">Power: </string>
+    <string name="power_formula">P = VI</string>
+</resources>

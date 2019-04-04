@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/page"
+    tools:context=".Length_Area_page">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width=""
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:scrollbarStyle="outsideInset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/Header"
+                style="@style/pageHeaders"
+                android:text="Light and Sound Formulae"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/title1"
+                style="@style/formulaTitleText"
+                android:text="@string/mirror_and_lens_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Header"
+
+            <TextView
+                android:id="@+id/formula1"
+                style="@style/formulaText"
+                android:text="@string/mirror_and_lens_formula"
+                app:layout_constraintStart_toEndOf="@+id/title1"
+                app:layout_constraintTop_toBottomOf="@+id/Header" />
+
+
+            <TextView
+                android:id="@+id/title2"
+                style="@style/formulaTitleText"
+                android:text="@string/magnification_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/formula1"
+
+            <TextView
+                android:id="@+id/formula2"
+                style="@style/formulaText"
+                android:text="@string/magnification_formula"
+                app:layout_constraintStart_toEndOf="@+id/title2"
+                app:layout_constraintTop_toBottomOf="@+id/formula1" />
+
+            <TextView
+                android:id="@+id/title3"
+                style="@style/formulaTitleText"
+                android:text="@string/power_of_a_lens_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/formula2" />
+
+            <TextView
+                android:id="@+id/formula3"
+                style="@style/formulaText"
+                android:text="@string/power_of_a_lens_formula"
+                app:layout_constraintStart_toEndOf="@+id/title3"
+                app:layout_constraintTop_toBottomOf="@+id/formula2" />
+
+            <TextView
+                android:id="@+id/title4"
+                style="@style/formulaTitleText"
+                android:text="@string/two_lenses_in_contact_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/formula3" />
+
+            <TextView
+                android:id="@+id/formula4"
+                style="@style/formulaText"
+                android:text="@string/two_lenses_in_contact_formula"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/title4"
+                app:layout_constraintTop_toBottomOf="@+id/formula3" />
+
+            <TextView
+                android:id="@+id/title5"
+                style="@style/formulaText"
+                android:text="@string/refractive_index_title"
+                android:textStyle=""
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title4" />
+
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

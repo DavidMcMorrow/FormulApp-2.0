@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@drawable/page"
+tools:context=".Maths_Homepage">
+
+    <TextView
+        android:id="@+id/Header"
+        style="@style/pageHeaders"
+        android:text="Maths"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/Trig_btn"
+        style="@style/pageButtons"
+        android:text="Trigonmetry"
+        android:textAllCaps="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Header" />
+
+
+    <Button
+        android:id="@+id/LandA_btn"
+        style="@style/pageButtons"
+        android:text="@string/surface_area_and_volume"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Trig_btn" />
+
+    <Button
+        android:id="@+id/quadrix_btn"
+        style="@style/pageButtons"
+        android:text="@string/solve_equation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LandA_btn" />
+
+    <Button
+        android:id="@+id/VandA_btn"
+        style="@style/pageButtons"
+        android:text="Get Area and Volume"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quadrix_btn" />
+
+</android.support.constraint.ConstraintLayout>
