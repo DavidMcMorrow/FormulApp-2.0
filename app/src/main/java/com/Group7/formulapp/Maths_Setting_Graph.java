@@ -8,7 +8,9 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.*;
+
 import java.util.*;
+
 import android.widget.AdapterView.OnItemSelectedListener;
 
 
@@ -30,7 +32,7 @@ public class Maths_Setting_Graph extends AppCompatActivity {
     private String lowery;
     private HashMap<Integer, String> colorFctList;
 
-    private TextView txt;
+    private TextView first_fct;
     private String[] fctList;
     private String var;
     private RelativeLayout mLayout;
@@ -39,7 +41,7 @@ public class Maths_Setting_Graph extends AppCompatActivity {
     private Double dupperx;
     private Double dlowery;
     private Double duppery;
-    private String  clickedColor;
+    private String clickedColor;
 
 
     @Override
@@ -56,7 +58,7 @@ public class Maths_Setting_Graph extends AppCompatActivity {
         upperEdity = (EditText) findViewById(R.id.upper_bound_y);
         upperText = (TextView) findViewById(R.id.txt_upper_bound);
         lowerText = (TextView) findViewById(R.id.txt_lower_bound);
-        txt = (TextView) findViewById(R.id.txt);
+        first_fct = (TextView) findViewById(R.id.first_fct);
         colorFctList = new HashMap<Integer, String>();
 
 
@@ -64,12 +66,13 @@ public class Maths_Setting_Graph extends AppCompatActivity {
         Intent intent = getIntent();
         fctList = intent.getStringArrayExtra("fct");
         var = intent.getStringExtra("variable");
-
+        first_fct.setText("Function 1: " + fctList[0]);
         for (int i = 0; i < fctList.length; i++) {
             if (fctList[i] != null) {
-                if (i != 0) {
+                if (i != 0) {// Already the textVew created for the first function which is mandatory
                     mLayout.addView(createNewTextView(i, fctList[i]));
                 }
+
                 mLayout.addView(createNewSpinner(i));
 
 
@@ -99,17 +102,16 @@ public class Maths_Setting_Graph extends AppCompatActivity {
 
         if (i == 1) {
 
-            p.addRule(RelativeLayout.BELOW, txt.getId());
+            p.addRule(RelativeLayout.BELOW, first_fct.getId());
 
         } else {
-
             p.addRule(RelativeLayout.BELOW, parentText.getId());
 
 
         }
         int numFct = i + 1;
 
-        textView.setText("Function" + i + currentFct);
+        textView.setText("Function " + numFct + ": " + currentFct);
         parentText = textView;
         textView.setLayoutParams(p);
         return textView;
@@ -119,7 +121,7 @@ public class Maths_Setting_Graph extends AppCompatActivity {
 
     protected Spinner createNewSpinner(int id) {
 
-       final int numId = id;
+        final int numId = id;
         Spinner spin = new Spinner(this);
 
         ArrayAdapter<CharSequence> dataAdapter = ArrayAdapter.createFromResource(this, R.array.colors, android.R.layout.simple_spinner_item);
@@ -136,37 +138,37 @@ public class Maths_Setting_Graph extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 clickedColor = parent.getItemAtPosition(position).toString();
                 Toast.makeText(parent.getContext(), clickedColor, Toast.LENGTH_SHORT).show();
-                colorFctList.put(numId,clickedColor);
+                colorFctList.put(numId, clickedColor);
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-        // TODO Auto-generated method stub
+                // TODO Auto-generated method stub
             }
         });
 
         if (id == 0) {
 
 
-            pbis.addRule(RelativeLayout.ALIGN_BASELINE, txt.getId());
-            pbis.addRule(RelativeLayout.ALIGN_PARENT_RIGHT, txt.getId());
+            pbis.addRule(RelativeLayout.ALIGN_BASELINE, first_fct.getId());
+            pbis.addRule(RelativeLayout.ALIGN_PARENT_RIGHT, first_fct.getId());
             previous = id;
 
 
         }
 
         if (id == 1) {
-            pbis.addRule(RelativeLayout.BELOW, txt.getId());
+            pbis.addRule(RelativeLayout.BELOW, first_fct.getId());
             previous = id;
             pbis.addRule(RelativeLayout.ALIGN_BASELINE, id);
             pbis.addRule(RelativeLayout.ALIGN_PARENT_RIGHT, id);
 
         } else {
-                if(id!=0){
-            pbis.addRule(RelativeLayout.BELOW, previous);
-            pbis.addRule(RelativeLayout.ALIGN_PARENT_RIGHT, previous);
-            previous = id;}
-
+            if (id != 0) {
+                pbis.addRule(RelativeLayout.BELOW, previous);
+                pbis.addRule(RelativeLayout.ALIGN_PARENT_RIGHT, previous);
+                previous = id;
+            }
 
 
         }
@@ -194,7 +196,7 @@ public class Maths_Setting_Graph extends AppCompatActivity {
         intent.putExtra("lowery", lowery);
         intent.putExtra("uppery", uppery);
         intent.putExtra("color", clickedColor);
-        intent.putExtra("hashmap",colorFctList);
+        intent.putExtra("hashmap", colorFctList);
 
         if (checkSetting(view, intent)) {
 
@@ -237,7 +239,7 @@ public class Maths_Setting_Graph extends AppCompatActivity {
         return true;
     }
 
-//Upper need to be bigger than lower boundarie
+    //Upper need to be bigger than lower boundarie
     public boolean upperValid(double lower, double upper) {
 
         return (lower < upper);
