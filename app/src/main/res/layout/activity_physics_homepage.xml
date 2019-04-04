@@ -5,64 +5,93 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".physics_homepage"
-    android:background="@drawable/formulapp_background">
+    android:background="@null">
 
 
-    <Button
-        android:id="@+id/Physics_btn1"
-        style="@style/FAbutton"
-        android:layout_marginTop="32dp"
-        android:text="Mechanics"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="4dp">
 
-    <Button
-        style="@style/FAbutton"
-        android:id="@+id/Physics_btn2"
-        android:text="Electricity"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Physics_btn1" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="507dp">
 
-    <Button
-        style="@style/FAbutton"
-        android:id="@+id/Physics_btn3"
-        android:text="Light/Optics"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Physics_btn2" />
+            <Button
+                android:id="@+id/Physics_btn6"
+                style="@style/FAtile"
+                android:background="@drawable/lightbluetile"
+                android:text="Lens Calculator"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Physics_btn5" />
 
-    <Button
-        style="@style/FAbutton"
-        android:id="@+id/Physics_btn4"
-        android:text="UVAST Calculator"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Physics_btn3" />
+            <Button
+                android:id="@+id/Physics_btn5"
+                style="@style/FAtile"
+                android:background="@drawable/lavender"
+                android:text="Conservation of Momentum Experiment"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Physics_btn4" />
 
-    <Button
-        style="@style/FAbutton"
-        android:id="@+id/Physics_btn5"
-        android:text="Conservation of Momentum Experiment"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Physics_btn4" />
+            <Button
+                android:id="@+id/Physics_btn4"
+                style="@style/FAtile"
+                android:background="@drawable/cyan"
+                android:text="UVAST Calculator"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Physics_btn3" />
+        </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
 
-    <Button
-        style="@style/FAbutton"
-        android:id="@+id/Physics_btn6"
-        android:text="Lens Calculator"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Physics_btn5" />
+            <Button
+                android:id="@+id/Physics_btn3"
+                style="@style/FAtile"
+                android:background="@drawable/cyan"
+                android:text="Light/Optics"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Physics_btn2" />
+
+            <Button
+                android:id="@+id/Physics_btn2"
+                style="@style/FAtile"
+                android:background="@drawable/softblue"
+                android:text="Electricity"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Physics_btn1" />
+
+            <Button
+                android:id="@+id/Physics_btn1"
+                style="@style/FAtile"
+                android:background="@drawable/cyan"
+                android:text="Mechanics"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </LinearLayout>
+    </LinearLayout>
 
 
 </android.support.constraint.ConstraintLayout>

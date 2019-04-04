@@ -5,46 +5,172 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    android:background="@drawable/formulapp_background"
+    android:background="@drawable/lightgrey"
     tools:context=".MainActivity">
 
 
-    <Button
-        android:id="@+id/maths_homepage_btn"
-        style="@style/FAbutton"
-        android:layout_marginTop="32dp"
-        android:text="@string/maths"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/Physics_Homepage_btn"
-        style="@style/FAbutton"
-        android:text="@string/physics"
-        app:layout_constraintTop_toBottomOf="@+id/maths_homepage_btn"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.0"  />
-
-    <ListView
-        android:id="@+id/listView"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="fill_parent"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView61"
+                style="@style/FAheaderItalics"
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Physics" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@null">
+
+                <Button
+                    android:id="@+id/mech_tile"
+                    style="@style/FAtile"
+                    android:layout_weight="2"
+                    android:background="@drawable/cyan"
+
+                    android:drawableBottom="@android:drawable/ic_menu_rotate"
+                    android:text="Mechanics" />
+
+                <Button
+                    android:id="@+id/elect_tile"
+                    style="@style/FAtile"
+                    android:layout_weight="2"
+                    android:background="@drawable/softblue"
+                    android:drawableBottom="@android:drawable/ic_lock_idle_charging"
+                    android:text="Electricty" />
+
+                <Button
+                    android:id="@+id/light_tile"
+                    style="@style/FAtile"
+                    android:layout_weight="2"
+                    android:background="@drawable/lavender"
+                    android:drawableBottom="@android:drawable/ic_menu_compass"
+                    android:text="Light and Optics" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@null">
+
+                <Button
+                    android:id="@+id/lense_tile"
+                    style="@style/FAtile"
+                    android:layout_weight="1"
+                    android:background="@drawable/softblue"
+                    android:drawableBottom="@android:drawable/ic_menu_search"
+                    android:text="Lens Calculator" />
+
+                <Button
+                    android:id="@+id/uvast_tile"
+                    style="@style/FAtile"
+                    android:layout_weight="1"
+                    android:background="@drawable/lightbluetile"
+                    android:drawableBottom="@android:drawable/ic_menu_always_landscape_portrait"
+                    android:text="Motion Equations" />
+
+                <Button
+                    android:id="@+id/conser_tile"
+                    style="@style/FAtile"
+                    android:layout_weight="1"
+                    android:background="@drawable/softblue"
+                    android:drawableBottom="@android:drawable/ic_menu_view"
+                    android:text="Experiments" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView65"
+                style="@style/FAheaderItalics"
+
+                android:text="Maths" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/Physics_Homepage_btn"
+                    style="@style/FAtile"
+
+                    android:layout_weight="2"
+                    android:text="@string/physics"
+                    android:background="@drawable/orange"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/maths_homepage_btn"
+                    android:drawableBottom="@android:drawable/ic_menu_manage"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <Button
+                    android:id="@+id/maths_homepage_btn"
+                    style="@style/FAtile"
+                    android:background="@drawable/magenta"
+                    android:layout_weight="2"
+                    android:text="@string/maths"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:drawableBottom="@android:drawable/ic_menu_manage"
+                    app:layout_constraintVertical_bias="0.0" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button9"
+                    style="@style/FAtile"
+                    android:background="@drawable/yellow"
+                    android:drawableBottom="@android:drawable/ic_menu_manage"
+                    android:layout_weight="1"
+                    android:text="Button" />
+
+                <Button
+                    android:id="@+id/button8"
+                    style="@style/FAtile"
+                    android:background="@drawable/orange"
+                    android:drawableBottom="@android:drawable/ic_menu_manage"
+                    android:layout_weight="1"
+                    android:text="Button" />
+
+                <Button
+                    android:id="@+id/button7"
+                    style="@style/FAtile"
+                    android:background="@drawable/magenta"
+                    android:drawableBottom="@android:drawable/ic_menu_manage"
+                    android:layout_weight="1"
+                    android:text="Button" />
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/listView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2" />
+        </LinearLayout>
+    </ScrollView>
 
 
 </android.support.constraint.ConstraintLayout>

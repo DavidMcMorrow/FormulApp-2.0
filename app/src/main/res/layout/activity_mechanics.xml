@@ -4,13 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/formulapp_background"
+    android:background="@null"
     tools:context=".Length_Area_page">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
         android:scrollbarStyle="outsideInset"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,6 +25,157 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/equ_mo"
+                style="@style/FAtitleBar"
+                android:background="@drawable/softbluebar"
+                android:text="Equations of Motion" />
+
+            <TextView
+                android:id="@+id/equ_mo_text"
+                style ="@style/FAtextBox"
+                android:text="-> v = u+at \n ->v^2 = u^2 + 2as \n -> s = ut +1/2 a(t^2)" />
+
+            <ImageView
+                android:id="@+id/equ_mo_footer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="2dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/textboxfooter" />
+
+            <TextView
+                android:id="@+id/Conmo"
+                style="@style/FAtitleBar"
+                android:background="@drawable/softbluebar"
+                android:text="Conservation of Momentum" />
+
+            <TextView
+                android:id="@+id/con_mo_text"
+                style="@style/FAtextBox"
+                android:text="-> m1 u1 + m2 u2 = m1 v1 +m2 " />
+
+            <ImageView
+                android:id="@+id/con_mo_footer"
+                style="@style/FAfooter"
+                app:srcCompat="@drawable/textboxfooter" />
+
+            <TextView
+                android:id="@+id/angle_r"
+                style="@style/FAtitleBar"
+                android:background="@drawable/softbluebar"
+                android:text="Angle in Radians" />
+
+            <TextView
+                android:id="@+id/angle_r_text"
+                style="@style/FAtextBox"
+                android:text="θ=s/r" />
+
+            <ImageView
+                android:id="@+id/angle_r_footer"
+                style="@style/FAfooter"
+                app:srcCompat="@drawable/textboxfooter" />
+
+            <TextView
+                android:id="@+id/angle_v"
+                style="@style/FAtitleBar"
+                android:background="@drawable/softbluebar"
+                android:text="Angular velocity" />
+
+            <TextView
+                android:id="@+id/angle_v_text"
+                style="@style/FAtextBox"
+                android:text="ω = θ/t" />
+
+            <ImageView
+                android:id="@+id/angle_v_footer"
+                style="@style/FAfooter"
+                app:srcCompat="@drawable/textboxfooter" />
+
+            <TextView
+                android:id="@+id/lin_v"
+                style="@style/FAtitleBar"
+                android:background="@drawable/softbluebar"
+                android:text="Linear velocity and angular velocity" />
+
+            <TextView
+                android:id="@+id/lin_v_text"
+                style="@style/FAtextBox"
+                android:text="v = rω" />
+
+            <ImageView
+                android:id="@+id/lin_v_footer"
+                style="@style/FAfooter"
+                app:srcCompat="@drawable/textboxfooter" />
+
+            <TextView
+                android:id="@+id/cen_a"
+                style="@style/FAtitleBar"
+                android:background="@drawable/softbluebar"
+                android:text="Centripetal Acceleration" />
+
+            <TextView
+                android:id="@+id/cen_a_text"
+                style="@style/FAtextBox"
+                android:text="a = rω^2 = (v^2)" />
+
+            <ImageView
+                android:id="@+id/cen_a_footer"
+                style="@style/FAfooter"
+                app:srcCompat="@drawable/textboxfooter" />
+            <TextView
+                android:id="@+id/cen_f"
+                style="@style/FAtitleBar"
+                android:background="@drawable/softbluebar"
+                android:text="Centripetal force" />
+
+            <TextView
+                android:id="@+id/cen_f_text"
+                style="@style/FAtextBox"
+                android:text="F = mrω^2= m(v^2)" />
+
+            <ImageView
+                android:id="@+id/cen_f_footer"
+                style="@style/FAfooter"
+                app:srcCompat="@drawable/textboxfooter" />
+            <TextView
+                android:id="@+id/n_grav_a"
+                style="@style/FAtitleBar"
+                android:background="@drawable/softbluebar"
+                android:text="Newton’s law of gravitation" />
+
+            <TextView
+                android:id="@+id/n_grav_text"
+                style="@style/FAtextBox"
+                android:text="F = G(m1m2)/d^2" />
+
+            <ImageView
+                android:id="@+id/n_grav_footer"
+                style="@style/FAfooter"
+                app:srcCompat="@drawable/textboxfooter" />
+
+            <TextView
+                android:id="@+id/fma_a"
+                style="@style/FAtitleBar"
+                android:background="@drawable/softbluebar"
+                android:text="Force and acceleration" />
+
+            <TextView
+                android:id="@+id/fma_text"
+                style="@style/FAtextBox"
+                android:text="F = ma" />
+
+            <ImageView
+                android:id="@+id/fma_footer"
+                style="@style/FAfooter"
+                app:srcCompat="@drawable/textboxfooter" />
 
 
             <TextView

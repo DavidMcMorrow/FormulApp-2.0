@@ -42,7 +42,7 @@ Parallel-plate capacitor: C = Aε/d\n\nEnergy stored in Capacitor: W = 1/2 * CV^
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/imageView"
+                app:layout_constraintStart_toEndOf="@+id/cylinder_img"
                 app:layout_constraintTop_toBottomOf="@+id/Header" />
 
 

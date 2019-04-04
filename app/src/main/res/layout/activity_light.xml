@@ -33,7 +33,7 @@ Power of a lens: P = 1/f \n\nTwo lenses in contact: P = P1 + P2\n\nRefractive in
 Doppler Effect: f' = (fc)/(c +/- u)\n\nFundamental Frequency of String: f = (1/2L) sqrt(T/u)"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/imageView"
+                app:layout_constraintStart_toEndOf="@+id/cylinder_img"
                 app:layout_constraintTop_toBottomOf="@+id/Header" />
 
 
