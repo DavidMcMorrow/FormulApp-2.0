@@ -11,10 +11,14 @@
     android:paddingLeft="0dp"
     android:paddingRight="0dp"
     android:orientation="vertical"
-    android:background="@drawable/page">
+    android:background="@drawable/formulapp_background">
 
     <TextView
+        style = "@style/FAbody"
+        android:layout_marginTop="32dp"
         android:id="@+id/info"
+
+
         android:layout_width="320dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="67dp"
@@ -22,10 +26,8 @@
         android:layout_marginTop="28dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
+
         android:text="-Use '-999' = value you want.\n-Use '-888' = value you don't have.\n"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="20dp"
-        android:typeface="serif"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,72 +35,67 @@
 
 
     <EditText
+        style="@style/FAbody"
         android:id="@+id/et_u"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:ems="10"
         android:hint="initial velocity 'u'"
         android:inputType="numberDecimal|numberSigned" />
 
     <EditText
+        style="@style/FAbody"
         android:id="@+id/et_v"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+
         android:ems="10"
         android:hint="final velocity 'v'"
         android:inputType="numberDecimal|numberSigned" />
 
     <EditText
+        style="@style/FAbody"
         android:id="@+id/et_a"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:ems="10"
         android:hint="acceleration 'a'"
         android:inputType="numberDecimal|numberSigned" />
 
     <EditText
+        style="@style/FAbody"
         android:id="@+id/et_s"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:ems="10"
         android:hint="distance 's'"
         android:inputType="numberDecimal|numberSigned" />
     <EditText
+        style="@style/FAbody"
         android:id="@+id/et_t"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+
         android:ems="10"
         android:hint="time 't'"
         android:inputType="numberDecimal|numberSigned" />
 
     <Button
+        style= "@style/FAbutton"
         android:id="@+id/bt_go"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+
         android:text="SOLVE" />
     <Button
+        style= "@style/FAbutton"
         android:id="@+id/clr"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+
         android:text="CLEAR" />
 
     <TextView
+        style = "@style/FAbody"
         android:id="@+id/tv_result01"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:text=""
-        android:textSize="20dp"/>
+       />
 
     <TextView
+        style = "@style/FAbody"
         android:id="@+id/tv_result02"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+
         android:text=""
-        android:textSize="20dp"/>
+        />
     <TextView
+        style = "@style/FAbody"
         android:id="@+id/tv_result03"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:text=""
-        android:textSize="20dp"/>
+        />
 </LinearLayout>
