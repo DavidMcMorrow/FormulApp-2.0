@@ -108,7 +108,6 @@
     <string name="get_area_and_volume">Get Area and Volume</string>
     <string name="fundamental_physical_constraints">Fundamental Physical Constraints</string>
     <string name="trigonmetry">Trigonmetry</string>
-    <string name="maths">Maths</string>
     <string name="rootfound">Real and Distinct Roots Found!</string>
     <string name="integral">&#8747;</string>
     <string name="ni_hint_f">Enter your function here</string>
@@ -117,6 +116,7 @@
     <string name="ni_button">Calculate integration</string>
     <string name="ni_button_home">Maths Homepage</string>
     <string name="maths_ni">Integrate a function</string>
+
     <string-array name="colors">
         <item>Blue</item>
         <item>Dark</item>

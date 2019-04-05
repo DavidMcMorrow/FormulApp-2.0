@@ -15,7 +15,7 @@ public class uvast_calc extends AppCompatActivity {
     TextView tv_result02;
     TextView tv_result03;
 
-    double u,vel,a,s,t;
+    double u,vel,a,s,t,no=0;
     char req;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,6 +77,8 @@ public class uvast_calc extends AppCompatActivity {
                 } else if(req == 't' && u != -999 && a != -999 && vel != -999 && s == -888){
                     t = (vel-u)/a;
                     tv_result01.setText("\nUsing formula 'v = u + at'"+"\nRearrange to get [t = (v-u)/a] t=" + t);
+                } else {
+                    no++;
                 }
 
                 //s=ut+ 1/2at^2
@@ -89,6 +91,8 @@ public class uvast_calc extends AppCompatActivity {
                 } else if (req == 'a' && s != -999 && t != -999 && u != -999 && vel == -888){
                     a = ((2*s)/(t*t)) - ((2*u)/t);
                     tv_result02.setText("\nUsing formula 's = ut + 1/2 at^2'"+"\nRearrange to get [a = 2s/t^2 - 2u/t]\n a=" + a);
+                } else {
+                    no++;
                 }
 
                 //v2 = u2 + 2as
@@ -97,15 +101,23 @@ public class uvast_calc extends AppCompatActivity {
                     tv_result03.setText("\nUsing formula 'v2 = u2 + 2as'"+"\n v=" + vel);
                 } else if (req == 'u' && vel != -999 && a != -999 && s != -999 && t == -888){
                     u = Math.sqrt((2*a*s) - (vel*vel));
-                    tv_result03.setText("\nUsing formula 'v2 = u2 + 2as'"+"\n u=" + u);
+                    tv_result03.setText("\nUsing formula 'v2 = u2 + 2as'"+"\nRearrange to get [u = sqrt(v^2 - 2as)]\nu=" + u);
                 } else if (req == 'a' && vel != -999 && u != -999 && s != -999 && t == -888){
                     a = ((vel*vel) - (u*u))/(2*s);
-                    tv_result03.setText("\nUsing formula 'v2 = u2 + 2as'"+"\n a=" + a);
+                    tv_result03.setText("\nUsing formula 'v2 = u2 + 2as'"+"\nRearrange to get [a = (v^2 - u^2)/2s]\na=" + a);
                 } else if (req == 's' && vel != -999 && u != -999 && a != -999 && t == -888){
                     s = ((vel*vel) - (u*u))/(2*a);
-                    tv_result03.setText("\nUsing formula 'v2 = u2 + 2as'"+"\n s=" + s);
+                    tv_result03.setText("\nUsing formula 'v2 = u2 + 2as'"+"\nRearrange to get [s = (v^2 - u^2)/2a] s=" + s);
+                } else {
+                    no++;
+                }
+                if(no == 3){
+                    tv_result01.setText("There was a problem with the variables you entered.");
+                    tv_result02.setText("Please make sure they are all correct or");
+                    tv_result03.setText("attempt to split the problem down further.");
                 }
             }
+
         });
         //clear button goes here
         clr.setOnClickListener(new View.OnClickListener() {

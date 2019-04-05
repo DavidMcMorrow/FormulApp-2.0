@@ -38,6 +38,7 @@
                 android:layout_below="@+id/variable"
                 android:layout_marginTop="20dp"
                 android:ems="10"
+                android:onClick="displayCheckView"
                 android:hint="Enter your function"
 
                 />

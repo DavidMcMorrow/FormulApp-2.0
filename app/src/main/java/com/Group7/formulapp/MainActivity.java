@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<String> list;
     ArrayAdapter<String > adapter;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,6 +68,54 @@ public class MainActivity extends AppCompatActivity {
 
         adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,list);
         listView.setAdapter(adapter);
+        listView.setVisibility(View.GONE);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if (position == 0) {
+                    Intent intent = new Intent(MainActivity.this, Trig_page.class);
+                    startActivity(intent);
+                    listView.setVisibility(View.GONE);
+                } else if(position == 1) {
+                    Intent intent = new Intent(MainActivity.this, quadrix.class);
+                    startActivity(intent);
+                    listView.setVisibility(View.GONE);
+                }else if(position == 2) {
+                    Intent intent = new Intent(MainActivity.this, Physics_page.class);
+                    startActivity(intent);
+                    listView.setVisibility(View.GONE);
+                }else if(position == 3) {
+                    Intent intent = new Intent(MainActivity.this, Trig_page.class);
+                    startActivity(intent);
+                    listView.setVisibility(View.GONE);
+                }else if(position == 4) {
+                    Intent intent = new Intent(MainActivity.this, Length_Area_page.class);
+                    startActivity(intent);
+                    listView.setVisibility(View.GONE);
+                }else if(position == 5) {
+                    Intent intent = new Intent(MainActivity.this, mechanics_page.class);
+                    startActivity(intent);
+                    listView.setVisibility(View.GONE);
+                }else if(position == 6) {
+                    Intent intent = new Intent(MainActivity.this, Maths_Setting_Graph.class);
+                    startActivity(intent);
+                    listView.setVisibility(View.GONE);
+                }else if(position == 7) {
+                    Intent intent = new Intent(MainActivity.this, MathsNumericIntegration.class);
+                    startActivity(intent);
+                    listView.setVisibility(View.GONE);
+                }else if(position == 8) {
+                    Intent intent = new Intent(MainActivity.this, uvast_calc.class);
+                    startActivity(intent);
+                    listView.setVisibility(View.GONE);
+                }else if(position == 9) {
+                    Intent intent = new Intent(MainActivity.this, Trig_page.class);
+                    startActivity(intent);
+                    listView.setVisibility(View.GONE);
+                }
+            }
+        });
 
     }
 
@@ -94,6 +143,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onQueryTextSubmit(String query) {
                 searchView.clearFocus();
+                listView.setVisibility(View.VISIBLE);
                 if(list.contains(query)){
                     adapter.getFilter().filter(query);
                 }else{
@@ -105,9 +155,13 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public boolean onQueryTextChange(String newText) {
+                listView.setVisibility(View.VISIBLE);
                 adapter.getFilter().filter(newText);
                 return false;
             }
+
+
+
         });
         return super.onCreateOptionsMenu(menu);
     }

@@ -11,16 +11,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Logs_page"></activity>
-        <activity android:name=".Guide_page" />
-        <activity android:name=".SI_Units_page" />
-        <activity android:name=".Base_Units_page" />
-        <activity android:name=".units_page" />
         <activity android:name=".Maths_Setting_Graph" />
         <activity android:name=".Maths_Function" />
         <activity android:name=".Maths_Graph" />
         <activity android:name=".MathsNumericIntegration" />
+
+
+        <activity android:name=".MathsNumericIntegration"/>
+
+
         <activity android:name=".uvast_calc"/>
+        <activity android:name=".gravity_page"/>
+
         <activity android:name=".Getting_Area_Volume" />
         <activity android:name=".light_page" />
         <activity android:name=".mechanics_page" />
