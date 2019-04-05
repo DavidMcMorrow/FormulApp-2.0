@@ -16,7 +16,6 @@
             android:name=".Square"
             android:label="@string/title_activity_square"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Getting_Area_Volume" />
         <activity android:name=".Maths_Setting_Graph" />
         <activity android:name=".Maths_Function" />
         <activity android:name=".Maths_Graph" />
@@ -25,6 +24,8 @@
 
 
 
+        <activity android:name=".gravity_page"
+            android:label ="Force of Attraction Calculator"/>
 
         <activity android:name=".uvast_calc"
             android:label ="Speed, Distance, Time Calculator"/>
@@ -68,7 +69,8 @@
         <activity android:name=".quadrix"
             android:label ="Quadtratics Solver"/>
 
-
+        <activity android:name=".OhmLawCalc"
+            android:label ="Ohms Law Calculator"/>
 
         <activity android:name=".MainActivity">
             <intent-filter>

@@ -125,7 +125,7 @@
                     style="@style/FAtile"
                     android:background="@drawable/magenta"
                     android:layout_weight="2"
-                    android:text="@string/maths"
+                    android:text="Maths"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
