@@ -15,7 +15,7 @@ public class Maths_Homepage extends AppCompatActivity {
     private Button LandA_btn;
     private Button VandA_btn;
     private Button graph_btn;
-    private Button differentiate_btn;
+//    private Button differentiate_btn;
     private Button logs_btn;
 
     @Override
@@ -28,7 +28,7 @@ public class Maths_Homepage extends AppCompatActivity {
         quadrix_btn = (Button) findViewById(R.id.quadrix_btn);
         VandA_btn = (Button) findViewById(R.id.VandA_btn);
         graph_btn = (Button) findViewById(R.id.graph_btn);
-        differentiate_btn = (Button) findViewById(R.id.differentiate_btn);
+      //  differentiate_btn = (Button) findViewById(R.id.differentiate_btn);
         Guide_btn = (Button) findViewById(R.id.Guide_btn);
         logs_btn = (Button) findViewById(R.id.logs_btn);
 

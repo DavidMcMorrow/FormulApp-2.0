@@ -189,27 +189,10 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/graph_btn"  />
 
-            <Button
-                android:id="@+id/differentiate_btn"
-                android:onClick="openDifferentiatePage"
-                android:layout_width="296dp"
-                android:layout_height="60dp"
-                android:layout_marginStart="67dp"
-                android:layout_marginLeft="67dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="48dp"
-                android:layout_marginRight="48dp"
-                android:background="@null"
-                android:text="Differentiate"
-                android:textSize="18sp"
-                android:typeface="serif"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/Maths_Ni" />
 
             <Button
                 android:id="@+id/logs_btn"
-                android:onClick="openDifferentiatePage"
+                android:onClick="openlogPage"
                 android:layout_width="296dp"
                 android:layout_height="60dp"
                 android:layout_marginStart="67dp"
