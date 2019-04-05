@@ -15,10 +15,7 @@
 
     <TextView
         style = "@style/FAbody"
-        android:layout_marginTop="32dp"
         android:id="@+id/info"
-
-
         android:layout_width="320dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="67dp"
