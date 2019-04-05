@@ -24,6 +24,7 @@ public class Maths_Homepage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maths__homepage);
+
         Trig_btn = (Button) findViewById(R.id.Trig_btn);         //declaring buttons
         Physics_btn = (Button) findViewById(R.id.Physics_btn);
         LandA_btn = (Button) findViewById(R.id.LandA_btn);
@@ -98,4 +99,6 @@ public class Maths_Homepage extends AppCompatActivity {
         Intent intent = new Intent(this, MathsNumericIntegration.class);
         startActivity(intent);
     }
+
+
 }

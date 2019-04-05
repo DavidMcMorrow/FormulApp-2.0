@@ -11,42 +11,42 @@
     android:paddingLeft="0dp"
     android:paddingRight="0dp"
     android:orientation="vertical"
-    android:background="@drawable/page">
+    android:background="@drawable/formulapp_background">
 
     <EditText
+        style = "@style/FAbody"
         android:id="@+id/et_a"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
         android:ems="10"
         android:hint="a"
         android:inputType="numberDecimal|numberSigned" />
 
     <EditText
+        style = "@style/FAbody"
         android:id="@+id/et_b"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+
         android:ems="10"
         android:hint="b"
         android:inputType="numberDecimal|numberSigned" />
 
     <EditText
+        style = "@style/FAbody"
         android:id="@+id/et_c"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+
         android:ems="10"
         android:hint="c"
         android:inputType="numberDecimal|numberSigned" />
 
     <Button
+        style = "@style/FAbutton"
         android:id="@+id/bt_go"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+
         android:text="SOLVE" />
 
     <TextView
+        style ="@style/FAbody"
         android:id="@+id/tv_result"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+
         android:text=""
         android:textSize="24dp"/>
 </LinearLayout>

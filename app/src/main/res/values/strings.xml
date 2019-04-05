@@ -1,8 +1,8 @@
 <resources>
-    <string name="app_name">FormulApp</string>
+    <string name="app_name">formulApp</string>
     <string name="content">Content</string>
     <string name="_1_trigonometry">Trigonometry</string>
-    <string name="_2_fundamental_physical_constants">Fundamental Physical Constants</string>
+    <string name="_2_fundamental_physical_constants">Physical Constants</string>
     <string name="table_of_contents">Table of Contents</string>
     <string name="trig_page">Trig page!</string>
     <string name="phyics_page">Physics Page!</string>
@@ -116,8 +116,16 @@
     <string name="ni_button">Calculate integration</string>
     <string name="ni_button_home">Maths Homepage</string>
     <string name="maths_ni">Integrate a function</string>
+
+    <string-array name="colors">
+        <item>Blue</item>
+        <item>Dark</item>
+        <item>Red</item>
+        <item>Green</item>
+        <item>Random</item>
+    </string-array>
     <string name="search">Search</string>
-    <string name="maths">Maths</string>
+
     <string name="physics">Physics</string>
     <string name="title_activity_square">Square</string>
 </resources>

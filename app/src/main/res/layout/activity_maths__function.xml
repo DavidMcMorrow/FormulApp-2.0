@@ -10,18 +10,9 @@
     <ScrollView
         android:layout_width="405dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
         android:scrollbarStyle="outsideInset"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.458">
+        tools:layout_editor_absoluteX="3dp"
+        tools:layout_editor_absoluteY="151dp">
 
 
         <RelativeLayout
@@ -35,18 +26,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:hint="Variable you want to use (Eg:x)"
                 android:ems="10"
-                />
+                android:hint="Variable you want to use (Eg:x)"
+                android:maxLength="1" />
 
 
             <EditText
                 android:id="@+id/init_fct"
-                android:layout_below="@+id/variable"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/variable"
                 android:layout_marginTop="20dp"
                 android:ems="10"
+                android:onClick="displayCheckView"
                 android:hint="Enter your function"
 
                 />
@@ -67,8 +59,8 @@
                 android:id="@+id/formula"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
                 android:layout_below="@+id/submit_fct"
+                android:layout_marginTop="20dp"
                 android:text=""
 
                 ></io.github.kexanie.library.MathView>
@@ -79,6 +71,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/formula"
+
                 android:layout_marginTop="20dp"
                 android:text="New function"
 
@@ -98,7 +91,10 @@
                 />
 
 
+
         </RelativeLayout>
     </ScrollView>
+
+
 
 </android.support.constraint.ConstraintLayout>
