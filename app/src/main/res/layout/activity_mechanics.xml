@@ -40,16 +40,7 @@
 
             <ImageView
                 android:id="@+id/equ_mo_footer"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="2dp"
-                android:layout_marginLeft="2dp"
-                android:layout_marginEnd="2dp"
-                android:layout_marginRight="2dp"
-                android:layout_marginBottom="2dp"
-                android:adjustViewBounds="true"
-                android:scaleType="fitXY"
-                app:srcCompat="@drawable/textboxfooter" />
+                style ="@style/FAfooter" />
 
             <TextView
                 android:id="@+id/Conmo"
@@ -65,7 +56,7 @@
             <ImageView
                 android:id="@+id/con_mo_footer"
                 style="@style/FAfooter"
-                app:srcCompat="@drawable/textboxfooter" />
+                />
 
             <TextView
                 android:id="@+id/angle_r"
@@ -81,7 +72,7 @@
             <ImageView
                 android:id="@+id/angle_r_footer"
                 style="@style/FAfooter"
-                app:srcCompat="@drawable/textboxfooter" />
+                />
 
             <TextView
                 android:id="@+id/angle_v"
@@ -97,7 +88,7 @@
             <ImageView
                 android:id="@+id/angle_v_footer"
                 style="@style/FAfooter"
-                app:srcCompat="@drawable/textboxfooter" />
+                 />
 
             <TextView
                 android:id="@+id/lin_v"
@@ -113,7 +104,7 @@
             <ImageView
                 android:id="@+id/lin_v_footer"
                 style="@style/FAfooter"
-                app:srcCompat="@drawable/textboxfooter" />
+                 />
 
             <TextView
                 android:id="@+id/cen_a"
@@ -129,7 +120,7 @@
             <ImageView
                 android:id="@+id/cen_a_footer"
                 style="@style/FAfooter"
-                app:srcCompat="@drawable/textboxfooter" />
+                 />
             <TextView
                 android:id="@+id/cen_f"
                 style="@style/FAtitleBar"
@@ -144,7 +135,7 @@
             <ImageView
                 android:id="@+id/cen_f_footer"
                 style="@style/FAfooter"
-                app:srcCompat="@drawable/textboxfooter" />
+                />
             <TextView
                 android:id="@+id/n_grav_a"
                 style="@style/FAtitleBar"
@@ -159,7 +150,7 @@
             <ImageView
                 android:id="@+id/n_grav_footer"
                 style="@style/FAfooter"
-                app:srcCompat="@drawable/textboxfooter" />
+                 />
 
             <TextView
                 android:id="@+id/fma_a"
@@ -175,29 +166,7 @@
             <ImageView
                 android:id="@+id/fma_footer"
                 style="@style/FAfooter"
-                app:srcCompat="@drawable/textboxfooter" />
-
-
-            <TextView
-                android:layout_marginTop="32dp"
-                android:id="@+id/textView67"
-                style="@style/FAbody"
-
-                android:text="Equations of Motion:\n
--> v = u + at\n
--> v^2 = u^2 + 2as\n
--> s = ut + 1/2 a(t^2)\nConservation of Momentum:\n
--> m1 u1 + m2 u2 = m1 v1 + m2 v2\nAngle in radians: θ=s/r \n\n
-Angular velocity: ω = θ/t \n\n
-Linear velocity and angular velocity: v = rω\n\n
-Centripetal acceleration: a = rω^2 = (v^2)/r\n\n
-Centripetal force: F = mrω^2= m(v^2)/r\n\n
-Newton’s law of gravitation: F = G(m1m2)/d^2\n\n
-Force and acceleration: F = ma\n\n"
-
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView57" />
-
+                />
 
 
         </LinearLayout>
