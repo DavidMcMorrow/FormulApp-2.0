@@ -14,6 +14,10 @@ public class Maths_Homepage extends AppCompatActivity {
     private Button quadrix_btn;
     private Button LandA_btn;
     private Button VandA_btn;
+    private Button two_d_btn;
+    private Button three_d;
+
+
     private Button graph_btn;
 //    private Button differentiate_btn;
     private Button logs_btn;
@@ -22,15 +26,24 @@ public class Maths_Homepage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maths__homepage);
+
         Trig_btn = (Button) findViewById(R.id.Trig_btn);         //declaring buttons
         Physics_btn = (Button) findViewById(R.id.Physics_btn);
         LandA_btn = (Button) findViewById(R.id.LandA_btn);
         quadrix_btn = (Button) findViewById(R.id.quadrix_btn);
         VandA_btn = (Button) findViewById(R.id.VandA_btn);
         graph_btn = (Button) findViewById(R.id.graph_btn);
+ 
       //  differentiate_btn = (Button) findViewById(R.id.differentiate_btn);
         Guide_btn = (Button) findViewById(R.id.Guide_btn);
         logs_btn = (Button) findViewById(R.id.logs_btn);
+
+        
+        two_d_btn = (Button) findViewById(R.id.two_d_btn);
+        three_d = (Button) findViewById(R.id.three_d);
+
+
+
 
     }
 
@@ -46,6 +59,11 @@ public class Maths_Homepage extends AppCompatActivity {
 
     public void openTrigPage(View v) {         //Not really sure how this work will have to look into it
         Intent intent = new Intent(this, Trig_page.class);
+        startActivity(intent);
+
+    }
+    public void openTrigPage(){         //Not really sure how this work will have to look into it
+        Intent intent = new Intent(this,Trig_page.class);
         startActivity(intent);
     }
 
@@ -72,6 +90,14 @@ public class Maths_Homepage extends AppCompatActivity {
         Intent intent = new Intent(this, Getting_Area_Volume.class);
         startActivity(intent);
     }
+    public void opentwo_d_btnPage(View v){
+        Intent intent = new Intent(this,Two_d_page.class);
+        startActivity(intent);
+    }
+    public void openthree_d_btnPage(View v){
+        Intent intent = new Intent(this,Three_d_page.class);
+        startActivity(intent);
+    }
 
     //Function to open Graph Page
     public void openGraphPage(View v) {
@@ -89,4 +115,6 @@ public class Maths_Homepage extends AppCompatActivity {
         Intent intent = new Intent(this, MathsNumericIntegration.class);
         startActivity(intent);
     }
+
+
 }

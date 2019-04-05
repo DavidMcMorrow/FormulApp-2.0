@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        //setSupportActionBar(myToolbar);
 
         maths_homepage_btn   =  (Button) findViewById(R.id.maths_homepage_btn);         //declaring buttons
         Physics_homepage_btn = (Button) findViewById(R.id.Physics_Homepage_btn);
