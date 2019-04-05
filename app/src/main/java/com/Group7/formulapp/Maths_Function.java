@@ -1,6 +1,6 @@
 package com.Group7.formulapp;
 
-import android.app.AlertDialog;
+
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.view.*;
 import android.widget.*;
 import android.app.ActionBar.*;
+import android.content.DialogInterface.*;
+
 import java.util.regex.*;
 
 import io.github.kexanie.library.MathView;
@@ -51,18 +53,8 @@ public class Maths_Function extends AppCompatActivity {
         fctList = new String[100];
         currentEdit = fct_init;
 
-        //Action when we click on the submit button : display the Math View of the fct
-        submitButton.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-
-                formula.setText("$$" + currentEdit.getText().toString() + "$$");
-                fct = currentEdit.getText().toString();
 
 
-            }
-        });
 
         //Action when we click ont the button new function : add a new EditText
         newFctButton.setOnClickListener(new View.OnClickListener() {
@@ -78,6 +70,14 @@ public class Maths_Function extends AppCompatActivity {
 
             }
         });
+    }
+
+
+    //Action when we click on the submit button : display the Math View of the fct
+    protected void displayCheckView(View view){
+        formula.setText("$$" + fct_init.getText().toString() + "$$");
+        fct = fct_init.getText().toString();
+
     }
 
     //Method to create a new EditText
@@ -105,6 +105,21 @@ public class Maths_Function extends AppCompatActivity {
             parentEdit = (EditText) findViewById(getResources().getIdentifier(name, "id", getPackageName()));
             p.addRule(RelativeLayout.BELOW, parentEdit.getId());
         }
+        editText.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                formula.setText("$$" + editText.getText().toString() + "$$");
+                fct = editText.getText().toString();
+            }
+
+
+
+
+
+            });
+
 
         editText.setLayoutParams(p);
 
@@ -125,9 +140,15 @@ public class Maths_Function extends AppCompatActivity {
 
         for (int j = 0; j < i; j++) { // Parcours des fils
             View child = editTextsContainer.getChildAt(j); // We gather all the child of the view
-            if (child instanceof EditText && child.getId() != variable.getId()) { // if its an editText, we collect his contents and add it into the array and not if its not the choice of the variable
-                   fctList[countTab] = ((EditText) child).getText().toString();
-                   countTab++;
+            // if its an editText, we collect his contents and add it into the array
+            //we dont collect the first Edit Text xwhich is the choice of the variable
+
+            if (child instanceof EditText && child.getId() != variable.getId()) {
+
+                if (!((EditText) child).getText().toString().isEmpty()) { // if the edit text is empty we dont take it
+                    fctList[countTab] = ((EditText) child).getText().toString();
+                }
+                countTab++;
 
             }
         }

@@ -116,6 +116,15 @@
     <string name="ni_button">Calculate integration</string>
     <string name="ni_button_home">Maths Homepage</string>
     <string name="maths_ni">Integrate a function</string>
+
+    <string-array name="colors">
+        <item>Blue</item>
+        <item>Dark</item>
+        <item>Red</item>
+        <item>Green</item>
+        <item>Random</item>
+    </string-array>
     <string name="search">Search</string>
+
     <string name="physics">Physics</string>
 </resources>
