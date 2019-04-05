@@ -2,185 +2,68 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="@null"
     tools:context=".Length_Area_page">
 
     <ScrollView
-        style="@style/FAscroll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
         android:scrollbarStyle="outsideInset"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0">
+        app:layout_constraintVertical_bias="1.0">
 
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <TextView
-                style="@style/FAtitleBar"
-                android:text="Coulomb's Law" />
+                android:id="@+id/Header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="67dp"
+                android:layout_marginLeft="67dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginRight="32dp"
+                android:text="Electricity Formulae"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:typeface="serif"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Electricity Formulae" />
+
 
             <TextView
-                style="@style/FAtextBox"
-                android:text=" F = 1/(4πε) * (q1*q2)/d^2" />
+                android:id="@+id/textView57"
+                android:layout_width="wrap_content"
+                android:layout_height="607dp"
+                android:layout_marginTop="45dp"
+                android:text="Coulomb's Law: F = 1/(4πε) * (q1*q2)/d^2\n\nField Strength: E = F/q\n
+Potential Difference: V = W/q\n\nOhm's Law: V = IR\n\nResistivity: p = RA/l\n\nResistors in Series: R = R1 + R2\n
+Resistors in Parallel: 1/R = 1/R1 + 1/R2\n\nWheatstone Bridge: R1/R2 = R3/R4\n\nJoule's Law = P = R(I^2)\n
+Force on Current-carrying conductor: F = IlB\n\nForce on Charged Particle: F = qvB\n\nInduced emf: E = -dO/dt\n\nCapacitance: C = q/V\n
+Parallel-plate capacitor: C = Aε/d\n\nEnergy stored in Capacitor: W = 1/2 * CV^2\nznPower: P = VI\n"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/imageView"
+                app:layout_constraintTop_toBottomOf="@+id/Header" />
 
-            <ImageView style="@style/FAfooter"/>
 
-            <TextView
-                style="@style/FAtitleBar"
-                android:text="Field Strength" />
-
-            <TextView
-                style="@style/FAtextBox"
-                android:text="E = F/q" />
-
-            <ImageView style="@style/FAfooter"/>
-
-            <TextView
-                style="@style/FAtitleBar"
-                android:text="Potential Difference" />
-
-            <TextView
-                style="@style/FAtextBox"
-                android:text="V = W/q" />
-
-            <ImageView style="@style/FAfooter"/>
-
-            <TextView
-                style="@style/FAtitleBar"
-                android:text="Ohm's Law" />
-
-            <TextView
-                style="@style/FAtextBox"
-                android:text="V = IR" />
-
-            <ImageView style="@style/FAfooter"/>
-
-            <TextView
-                style="@style/FAtitleBar"
-                android:text="Resistivity" />
-
-            <TextView
-                style="@style/FAtextBox"
-                android:text="p = RA" />
-
-            <ImageView style="@style/FAfooter"/>
-
-            <TextView
-                style="@style/FAtitleBar"
-                android:text="Resistors in Series" />
-
-            <TextView
-                style="@style/FAtextBox"
-                android:text="R = R1 + R2" />
-
-            <ImageView style="@style/FAfooter"/>
-
-            <TextView
-                style="@style/FAtitleBar"
-                android:text="Resistors in Parallel" />
-
-            <TextView
-                style="@style/FAtextBox"
-                android:text=" 1/R = 1/R1 + 1/R2" />
-
-            <ImageView style="@style/FAfooter"/>
-
-            <TextView
-                style="@style/FAtitleBar"
-                android:text="Wheatstone Bridge" />
-
-            <TextView
-                style="@style/FAtextBox"
-                android:text="R1/R2 = R3/R4" />
-
-            <ImageView style="@style/FAfooter"/>
-
-            <TextView
-                style="@style/FAtitleBar"
-                android:text="Joule's Law" />
-
-            <TextView
-                style="@style/FAtextBox"
-                android:text="P = R(I^2)" />
-
-            <ImageView style="@style/FAfooter"/>
-
-            <TextView
-                style="@style/FAtitleBar"
-                android:text="Force on Current-carrying conductor" />
-
-            <TextView
-                style="@style/FAtextBox"
-                android:text="F = IlB" />
-
-            <ImageView style="@style/FAfooter"/>
-
-            <TextView
-                style="@style/FAtitleBar"
-                android:text="Force on Charged Particle" />
-
-            <TextView
-                style="@style/FAtextBox"
-                android:text="F = qvB" />
-
-            <ImageView style="@style/FAfooter"/>
-
-            <TextView
-                style="@style/FAtitleBar"
-                android:text="Induced emf" />
-
-            <TextView
-                style="@style/FAtextBox"
-                android:text="E = -dO/dt" />
-
-            <ImageView style="@style/FAfooter"/>
-
-            <TextView
-                style="@style/FAtitleBar"
-                android:text="Capacitance" />
-
-            <TextView
-                style="@style/FAtextBox"
-                android:text="C = q/V" />
-
-            <ImageView style="@style/FAfooter"/>
-
-            <TextView
-                style="@style/FAtitleBar"
-                android:text="Parallel-plate capacitor" />
-
-            <TextView
-                style="@style/FAtextBox"
-                android:text="C = Aε/d" />
-
-            <ImageView style="@style/FAfooter"/>
-
-            <TextView
-                style="@style/FAtitleBar"
-                android:text="Energy stored in Capacitor" />
-
-            <TextView
-                style="@style/FAtextBox"
-                android:text="W = 1/2 * CV^2" />
-
-            <ImageView style="@style/FAfooter"/>
-
-            <TextView
-                style="@style/FAtitleBar"
-                android:text="Power" />
-
-            <TextView
-                style="@style/FAtextBox"
-                android:text="P = VI" />
-
-            <ImageView style="@style/FAfooter"/>
 
 
         </LinearLayout>

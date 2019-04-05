@@ -1,15 +1,22 @@
 <resources>
-    <string name="app_name">formulApp</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="FORMULAPP">Formulapp</string>
+    <string name="maths">MATHEMATICS</string>
+    <string name="app_name">navBar</string>
     <string name="content">Content</string>
     <string name="_1_trigonometry">Trigonometry</string>
-    <string name="_2_fundamental_physical_constants">Physical Constants</string>
+    <string name="_2_fundamental_physical_constants">Fundamental Physical Constants</string>
     <string name="table_of_contents">Table of Contents</string>
     <string name="trig_page">Trig page!</string>
     <string name="phyics_page">Physics Page!</string>
     <string name="length_area">Length and Area Page! </string>
     <string name="title_activity_length__area_page">Length_Area_page</string>
     <string name="title_activity_length__area__page">Length Area Page</string>
-    <string name="action_settings">Settings</string>
     <string name="compund_angle_formulae">Odd/Even Identities</string>
     <string name="odd_even_identities">Odd/Even Identities</string>
     <string name="sin_x_sin_x">sin(-x) = -sin(x)</string>
@@ -116,15 +123,12 @@
     <string name="ni_button">Calculate integration</string>
     <string name="ni_button_home">Maths Homepage</string>
     <string name="maths_ni">Integrate a function</string>
-
-    <string-array name="colors">
-        <item>Blue</item>
-        <item>Dark</item>
-        <item>Red</item>
-        <item>Green</item>
-        <item>Random</item>
-    </string-array>
     <string name="search">Search</string>
 
     <string name="physics">Physics</string>
+
+
+    <string name="title_activity_testcase">testcase</string>
+    <string name="Differentiate">Differentiate</string>
+
 </resources>
