@@ -1,4 +1,4 @@
-package com.Group7.formulapp;
+package com.example.navbar;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -52,7 +52,7 @@ public class physics_experiments_homepage extends AppCompatActivity {
                 intent = new Intent(this,conservation_of_momentum.class);
                 break;
             case 1:
-                intent = new Intent(this,focal_length.class);
+                intent = new Intent(this,conservation_of_momentum.class);
                 break;
             case 2:
                 intent = new Intent(this,conservation_of_momentum.class);
