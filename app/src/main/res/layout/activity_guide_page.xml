@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:auto="http://schemas.android.com/apk/res-auto"
     tools:context=".Guide_page">
 
     <TextView
@@ -51,7 +52,6 @@
         android:layout_marginStart="200dp"
         android:layout_marginLeft="200dp"
         android:layout_marginTop="178dp"
-
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:textColor="@color/colorPrimaryDark"
@@ -242,7 +242,7 @@
         android:layout_marginTop="35dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
-        android:text="square root "
+        android:text="sqrt(x)"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="20sp"
         android:typeface="serif"
@@ -259,12 +259,12 @@
         android:layout_marginStart="200dp"
         android:layout_marginLeft="200dp"
         android:layout_marginTop="35dp"
-
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="30sp"
         android:typeface="serif"
+        auto:text="$$\\sqrt{x)$$"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"

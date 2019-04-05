@@ -29,7 +29,7 @@ public class Guide_page extends AppCompatActivity {
         text3 = "sin(x)";
         text4 = "cos(x)";
         text5 = "tan(x)";
-        text6 = "sqrt(x)";
+        text6 = "\\sqrt{x}";
         formula.setText("$$"+ text +"$$");
         formula1.setText("$$"+text1 + "$$");
         formula2.setText("$$"+text2+"$$");
@@ -37,6 +37,7 @@ public class Guide_page extends AppCompatActivity {
         formula4.setText("$$"+text4+"$$");
         formula5.setText("$$"+text5+"$$");
         formula6.setText("$$"+text6+"$$");
+        //formula6.setText("$$"+text6+"$$");
 
         //formula5.setText("$$\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}$$");
 

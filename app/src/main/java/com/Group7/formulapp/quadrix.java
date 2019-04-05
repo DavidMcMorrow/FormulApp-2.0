@@ -12,12 +12,12 @@ import io.github.kexanie.library.MathView;
 import static org.apache.commons.math3.util.Precision.round;
 
 public class quadrix extends AppCompatActivity {
+
     EditText et_a, et_b, et_c;
     Button bt_go;
     TextView tv_result;
     MathView function2;
     String text;
-
 
     double a, b, c, d, x1, x2;
     @Override

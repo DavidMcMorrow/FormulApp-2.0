@@ -32,29 +32,33 @@ public class Logs_page extends AppCompatActivity {
         bt_go.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                if(!et_a.getText().toString().equals("") && !et_b.getText().toString().equals("") &&
-                        !et_c.getText().toString().equals("")){
-                    a = Double.parseDouble(et_a.getText().toString());
+
+
+                if(!et_b.getText().toString().equals("") && !et_c.getText().toString().equals("")) {
                     b = Double.parseDouble(et_b.getText().toString());
                     c = Double.parseDouble(et_c.getText().toString());
-
-                    if(a == 999){
-                        c = (1 / c);
-                        a = (int) Math.pow(b,c);
-                        tv_result.setText("a = "+ a);
-                    }
-
-                    else if(b == 999){
-                        b = (int) Math.pow(a,c);
-
-                        tv_result.setText("b = " + b);
-                    }
-                    else if(c == 999){
-                        c = (int) (Math.log(b) / Math.log(a));
-                        tv_result.setText("c = " + c );
-                    }
+                    c = (1 / c);
+                    a = (int) Math.pow(b, c);
+                    tv_result.setText("a = " + a);
                 }
+
+                if(!et_a.getText().toString().equals("") && !et_c.getText().toString().equals("")) {
+                        a = Double.parseDouble(et_a.getText().toString());
+                        c = Double.parseDouble(et_c.getText().toString());
+                        b = (int) Math.pow(a,c);
+                        tv_result.setText("b = " + b);
+                }
+
+                if(!et_a.getText().toString().equals("") && !et_b.getText().toString().equals("")) {
+                    b = Double.parseDouble(et_b.getText().toString());
+                    a = Double.parseDouble(et_a.getText().toString());
+                    c = (int) (Math.log(b) / Math.log(a));
+                        tv_result.setText("c = " + c );
+
+                }
+
             }
+
         });
 
 
