@@ -21,6 +21,7 @@
 
 
         <activity android:name=".uvast_calc"/>
+        <activity android:name=".gravity_page"/>
 
         <activity android:name=".Getting_Area_Volume" />
         <activity android:name=".light_page" />

@@ -14,6 +14,7 @@ public class physics_homepage extends AppCompatActivity {
     private Button Physics_btn4;
     private Button Physics_btn5;
     private Button Physics_btn6;
+    private Button Physics_btn7;
     @Override
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +27,7 @@ public class physics_homepage extends AppCompatActivity {
         Physics_btn4 = (Button) findViewById(R.id.Physics_btn4);
         Physics_btn5 = (Button) findViewById(R.id.Physics_btn5);
         Physics_btn6 = (Button) findViewById(R.id.Physics_btn6);
+        Physics_btn7 = (Button) findViewById(R.id.Physics_btn7);
 
         Physics_btn1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,6 +65,12 @@ public class physics_homepage extends AppCompatActivity {
                 openPhysicsPage5(); // function for opening page
             }
         });
+        Physics_btn7.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                openPhysicsPage7(); // function for opening page
+            }
+        });
         Physics_btn6.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
@@ -95,6 +103,11 @@ public class physics_homepage extends AppCompatActivity {
     public void openPhysicsPage6() {
 
         Intent intent = new Intent(this, lens_calc.class);
+        startActivity(intent);
+    }
+    public void openPhysicsPage7() {
+
+        Intent intent = new Intent(this, gravity_page.class);
         startActivity(intent);
     }
 
