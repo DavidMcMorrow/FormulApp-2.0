@@ -31,29 +31,51 @@
             android:orientation="vertical">
 
 
+            <TextView
+                android:id="@+id/txt_choice_color"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/variable"
+                android:layout_marginTop="20dp"
+                android:text="Choice of color"
+                android:textSize="20dp"
+                android:textStyle="bold" />
 
 
             <TextView
                 android:id="@+id/first_fct"
                 android:layout_width="100dp"
+                android:layout_below="@+id/txt_choice_color"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:ems="20"
 
 
-
-
                 />
+
+
+            <TextView
+                android:id="@+id/txt_boundaries"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/first_fct"
+                android:layout_marginTop="20dp"
+                android:text="Choice of boundaries"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/txt_lower_bound"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/first_fct"
+                android:layout_below="@+id/txt_boundaries"
                 android:layout_alignParentRight="@+id/txt_upper_bound"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
-                android:ems="20"
                 android:text="Lower bound"
+                android:ems="20"
+                android:textStyle="bold"
+
 
                 />
 
@@ -61,12 +83,13 @@
                 android:id="@+id/txt_upper_bound"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/first_fct"
+                android:layout_below="@+id/txt_boundaries"
                 android:layout_alignLeft="@+id/txt_lower_bound"
                 android:layout_centerHorizontal="true"
                 android:layout_marginLeft="188dp"
                 android:layout_marginTop="20dp"
                 android:ems="20"
+                android:textStyle="bold"
                 android:text="Upper bound " />
 
 

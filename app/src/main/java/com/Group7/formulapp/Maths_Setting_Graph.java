@@ -22,6 +22,7 @@ public class Maths_Setting_Graph extends AppCompatActivity {
     private TextView parentText;
     private TextView upperText;
     private TextView lowerText;
+    private TextView boundariesText;
     private EditText lowerEditx;
     private EditText upperEditx;
     private EditText lowerEdity;
@@ -60,6 +61,7 @@ public class Maths_Setting_Graph extends AppCompatActivity {
         lowerText = (TextView) findViewById(R.id.txt_lower_bound);
         first_fct = (TextView) findViewById(R.id.first_fct);
         colorFctList = new HashMap<Integer, String>();
+        boundariesText=(TextView) findViewById(R.id.txt_boundaries);
 
 
         //We gather the information of the previous activity
@@ -91,10 +93,9 @@ public class Maths_Setting_Graph extends AppCompatActivity {
 
 
         //We need to move the upper and lower boundaries display according to the creation of new textView
-        RelativeLayout.LayoutParams mLayout2 = (RelativeLayout.LayoutParams) lowerText.getLayoutParams();
+        RelativeLayout.LayoutParams mLayout2 = (RelativeLayout.LayoutParams) boundariesText.getLayoutParams();
         mLayout2.addRule(RelativeLayout.BELOW, textView.getId());
-        RelativeLayout.LayoutParams mLayout3 = (RelativeLayout.LayoutParams) upperText.getLayoutParams();
-        mLayout3.addRule(RelativeLayout.BELOW, textView.getId());
+
 
 
         //We create a new relative layout to be able to display the new text view above the others
