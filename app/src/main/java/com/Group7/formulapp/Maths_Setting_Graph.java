@@ -71,11 +71,11 @@ public class Maths_Setting_Graph extends AppCompatActivity {
         first_fct.setText("Function 1: " + fctList[0]);
         for (int i = 0; i < fctList.length; i++) {
             if (fctList[i] != null) {
-                if (i != 0) {// Already the textVew created for the first function which is mandatory
+                if (i != 0) {// The textView already created for the first function which is mandatory
                     mLayout.addView(createNewTextView(i, fctList[i]));
                 }
 
-                mLayout.addView(createNewSpinner(i));
+                mLayout.addView(createNewSpinner(i)); // we create a new spinner for each editText, for the choice of the color
 
 
             }
@@ -120,6 +120,8 @@ public class Maths_Setting_Graph extends AppCompatActivity {
 
     }
 
+
+    //Method to create a new spinner
     protected Spinner createNewSpinner(int id) {
 
         final int numId = id;
@@ -148,6 +150,7 @@ public class Maths_Setting_Graph extends AppCompatActivity {
             }
         });
 
+        //we define constraint for the layout
         if (id == 0) {
 
 
@@ -240,7 +243,7 @@ public class Maths_Setting_Graph extends AppCompatActivity {
         return true;
     }
 
-    //Upper need to be bigger than lower boundarie
+    //Check that upperbound bigger than lower boundarie
     public boolean upperValid(double lower, double upper) {
 
         return (lower < upper);

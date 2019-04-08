@@ -32,8 +32,7 @@ public class physics_homepage extends AppCompatActivity {
         Physics_btn5 = (Button) findViewById(R.id.Physics_btn5);
         Physics_btn6 = (Button) findViewById(R.id.Physics_btn6);
         Physics_btn7 = (Button) findViewById(R.id.Physics_btn7);
-        Physics_btn8 = (Button) findViewById(R.id.Physics_btn8);
-        Physics_btn9 = (Button) findViewById(R.id.Physics_btn9);
+
 
         Physics_btn1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -89,18 +88,7 @@ public class physics_homepage extends AppCompatActivity {
                 openPhysicsPage7(); // function for opening page
             }
         });
-        Physics_btn8.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                openPhysicsPage8(); // function for opening page
-            }
-        });
-        Physics_btn9.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                openPhysicsPage9(); // function for opening page
-            }
-        });
+
     }
     public void openPhysicsPage1(){         //Not really sure how this work will have to look into it
         Intent intent = new Intent(this,mechanics_page.class);
@@ -134,16 +122,7 @@ public class physics_homepage extends AppCompatActivity {
         Intent intent = new Intent(this, gravity_page.class);
         startActivity(intent);
     }
-    public void openPhysicsPage8() {
 
-        Intent intent = new Intent(this, OhmLawCalc.class);
-        startActivity(intent);
-    }
-    public void openPhysicsPage9() {
-
-        Intent intent = new Intent(this, gravity_page.class);
-        startActivity(intent);
-    }
 
 
 }

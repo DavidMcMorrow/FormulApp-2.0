@@ -74,7 +74,7 @@ public class Maths_Graph extends AppCompatActivity {
         series = new LineGraphSeries<>();
 
         //Define the number of data point we use to build the graph
-        int numPoints = 100000;
+        int numPoints = 500000;
         for (int j = 0; j < fctList.length - 1; j++) {
 
             if (fctList[j] != null && !fctList[j].isEmpty()) { // for each function enter by the user
@@ -88,7 +88,7 @@ public class Maths_Graph extends AppCompatActivity {
                 minY = Double.parseDouble(lowerBoundy); //min y = lower bound define by user for horizontal axis
                 maxY = Double.parseDouble(upperBoundy);
 
-                x = minX;
+                x = minX;//the first value of x is the minimum defined byt the user
 
                 series = new LineGraphSeries<>();
 
@@ -100,7 +100,7 @@ public class Maths_Graph extends AppCompatActivity {
                         myParser.parseExpression(fctList[j]);
                         y = myParser.getValue();
                         // We add the point to the series
-                        series.appendData(new DataPoint(x, y), true, 100000);
+                        series.appendData(new DataPoint(x, y), true, 500000);
 
                     }
                 }
@@ -187,7 +187,7 @@ public class Maths_Graph extends AppCompatActivity {
 
             new AlertDialog.Builder(this)
                     .setTitle("Permission needed")
-                    .setMessage("This permission is needed to access to the gallery")
+                    .setMessage("This permission is needed to share the graph")
                     .setPositiveButton("ok", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {

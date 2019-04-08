@@ -47,7 +47,7 @@ public class Maths_Function extends AppCompatActivity {
         formula = (MathView) findViewById(R.id.formula);
         variable = (EditText) findViewById(R.id.variable);
         nbNewFct = 0;
-        fctList = new String[100];
+
         currentEdit = fct_init;
 
 
@@ -144,7 +144,7 @@ public class Maths_Function extends AppCompatActivity {
     protected void goToGraphSetting(View view) {
         EditText et;
         ViewGroup editTextsContainer = (ViewGroup) findViewById(R.id.relative);
-
+        fctList = new String[100];
         int i = editTextsContainer.getChildCount();
         int countTab = 0;
 
