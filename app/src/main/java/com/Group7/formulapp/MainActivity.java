@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Button maths_homepage_btn;
     private Button Physics_homepage_btn;
+    private Button Units_btn;
     ListView listView;
     ArrayList<String> list;
     ArrayAdapter<String > adapter;
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
         listView = (ListView) findViewById(R.id.listView);
 
+        Units_btn = (Button) findViewById(R.id.Units_btn);
 
         maths_homepage_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,6 +47,14 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
+        Units_btn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                openUnits_page();   //function for opening page
+            }
+
+        });
+
 
         list = new ArrayList<>();
         list.add("Formula 1");
@@ -118,6 +128,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void openPhysics_homepage(){
         Intent intent = new Intent(this,physics_homepage.class);
+        startActivity(intent);
+    }
+    public void openUnits_page(){
+        Intent intent = new Intent(this,units_page.class);
         startActivity(intent);
     }
 

@@ -8,6 +8,7 @@ import android.content.Intent;
 
 public class Maths_Homepage extends AppCompatActivity {
 
+    private Button Guide_btn;
     private Button Trig_btn;
     private Button Physics_btn;
     private Button quadrix_btn;
@@ -18,7 +19,8 @@ public class Maths_Homepage extends AppCompatActivity {
 
 
     private Button graph_btn;
-    private Button differentiate_btn;
+//    private Button differentiate_btn;
+    private Button logs_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,15 +33,29 @@ public class Maths_Homepage extends AppCompatActivity {
         quadrix_btn = (Button) findViewById(R.id.quadrix_btn);
         VandA_btn = (Button) findViewById(R.id.VandA_btn);
         graph_btn = (Button) findViewById(R.id.graph_btn);
-        differentiate_btn = (Button) findViewById(R.id.differentiate_btn);
+ 
+      //  differentiate_btn = (Button) findViewById(R.id.differentiate_btn);
+        Guide_btn = (Button) findViewById(R.id.Guide_btn);
+        logs_btn = (Button) findViewById(R.id.logs_btn);
+
+        
         two_d_btn = (Button) findViewById(R.id.two_d_btn);
         three_d = (Button) findViewById(R.id.three_d);
+
 
 
 
     }
 
     //Function to open Trig Page
+    protected void openGuidePage(View v){
+        Intent intent = new Intent(this, Guide_page.class);
+        startActivity(intent);
+    }
+    protected void openlogPage(View v){
+        Intent intent = new Intent(this, Logs_page.class);
+        startActivity(intent);
+    }
 
     public void openTrigPage(View v) {         //Not really sure how this work will have to look into it
         Intent intent = new Intent(this, Trig_page.class);
